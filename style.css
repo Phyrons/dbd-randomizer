@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --ow-orange: #f99e1a;
+  --ow-red: #e30000;
+  --ow-blue: #00d2ff;
+  --ow-green: #39ff14;
+  --ow-gold: #ffca28;
+  --ow-silver: #e0e0e0;
+}
+
+/* --- BASE --- */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  font-family: 'Anta', sans-serif;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+}
+
+.stream-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Título arriba, Comandos abajo, Panel central maximizado */
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(10, 10, 10, 0.95);
+  padding: 10px 0; /* Compactamos un poco general */
+}
+
+/* --- TÍTULO NEÓN --- */
+.neon-title-wrapper {
+  width: 100%;
+  padding: 10px 0; /* Menos padding vertical para ganar espacio */
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(277, 0, 0, 0.15), transparent);
+}
+
+.neon-title {
+  font-size: clamp(30px, 5vw, 65px); /* Fuente más compacta */
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0;
+  text-shadow: 0 0 7px #fff, 0 0 20px var(--ow-red), 0 0 40px var(--ow-red);
+}
+
+/* --- NUMERACIÓN NEÓN --- */
+#contenedor-numeros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Debe ser exactamente igual al gap de contenedor-ganadores */
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: -10px; /* Acerca los números un poco a las cartas */
+}
+
+.numero-slot {
+  width: 400px; /* CRUCIAL: Debe ser exactamente el mismo width que .slot-ganador */
+  text-align: center;
+  transform: scale(0.9); /* Opcional: para que encaje con la escala inicial de las cartas */
+}
+
+.numero-slot span {
+  font-family: 'Quantico', sans-serif;
+  font-size: 55px; /* Tamaño del número */
+  font-weight: 700;
+  color: #ffffff;
+  /* Efecto resplandeciente morado para combinar con tus rombos */
+  text-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe, 0 0 40px #bc13fe;
+  animation: neon-pulse-text 1.5s infinite alternate;
+}
+
+#contenedor-ganadores {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* CAMBIAR de center a flex-start */
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+  perspective: 1000px;
+}
+
+.slot-ganador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Fuerza a que todo empiece desde arriba */
+  width: 400px; 
+  min-height: 450px; /* Dale una altura mínima suficiente para que el texto tenga espacio abajo */
+  transition: all 0.5s ease;
+  opacity: 0.5;
+  transform: scale(0.9);
+  vertical-align: top; /* Ayuda a mantener la alineación visual */
+}
+
+.slot-ganador.activo {
+  opacity: 1;
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.slot-ganador .rombo-neon {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px; /* Espacio constante desde la parte superior */
+  margin-bottom: 60px; /* Mantiene el espacio con el texto */
+  flex-shrink: 0; /* Evita que el rombo se aplaste si el texto es gigante */
+}
+
+.slot-ganador h2 {
+  font-size: 26px;
+  margin: 10px 0 0 0;
+  text-shadow: 0 0 10px var(--ow-orange);
+  
+  /* NUEVO: Control de texto en múltiples líneas */
+  text-align: center;        /* Centra el texto si salta a una segunda línea */
+  max-width: 90%;            /* Le da un pequeño margen del 10% para que no toque los bordes de la pantalla/casilla */
+  overflow-wrap: break-word; /* Fuerza el salto si una palabra es exageradamente larga */
+  line-height: 1.1;          /* Junta un poco las dos líneas para que se lea como un solo título */
+}
+
+.slot-ganador h3 {
+  font-size: 26px;
+  color: #aaa;
+  margin: 0;
+  
+  /* NUEVO: Control de texto en múltiples líneas */
+  text-align: center;
+  max-width: 90%;
+  overflow-wrap: break-word;
+  line-height: 1.1;
+}
+
+/* Contenedor principal del ganador */
+#panel-ganador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  z-index: 10;
+}
+
+/* El Rombo Neón (El contenedor rotado) */
+.rombo-neon {
+  width: 220px;
+  height: 220px;
+  /* Fondo morado con opacidad */
+  background-color: rgba(138, 43, 226, 0.3); 
+  /* Borde neón morado */
+  border: 4px solid #bc13fe;
+  /* Resplandor neón */
+  box-shadow: 
+    0 0 15px #bc13fe, 
+    0 0 30px #bc13fe, 
+    inset 0 0 15px #bc13fe;
+  
+  /* Giramos el div para que sea un rombo vertical */
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px; /* Espacio para que la punta no tape el texto */
+  overflow: hidden; /* Mantiene la imagen dentro de los límites del rombo */
+}
+
+/* La Imagen del Ganador (Enderezada) */
+/* Imágenes de los ganadores en los 4 slots (Enderezadas) */
+.rombo-neon img {
+  /* 1. Rotación inversa para que la Perk quede totalmente recta */
+  transform: rotate(-45deg);
+  
+  /* 2. Escalado matemático para que la imagen cubra las esquinas del rombo */
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain; /* Se ajusta completa sin recortarse */
+
+  max-width: 100%;
+  max-height: 100%;
+  
+  /* 3. Mantiene la proporción para que no se aplaste */
+  object-fit: contain; 
+  
+  /* 4. Efectos visuales */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  transition: all 0.5s ease;
+}
+
+/* Ajuste del nombre para que no se encime */
+#nombre-ganador {
+  margin: 0;
+  font-size: 64px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 0 10px #bc13fe;
+  font-family: 'Quantico', sans-serif;
+}
+
+#personaje-ganador {
+  font-size: clamp(28px, 4vw, 50px); /* Un poco más pequeño que el nombre de la perk */
+  margin: 5px 0 0 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #aaa; /* Un tono grisáceo para que no opaque al nombre principal */
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.victoria #imagen-ganador {
+  animation: neon-pulse 1.5s infinite alternate;
+}
+
+/* --- RULETA CON FLECHAS ARREGLADAS Y CENTRADAS --- */
+.selector-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100px; /* Bajamos altura de ruleta a 100px para compactar */
+  background: rgba(0, 0, 0, 0.9);
+  border-top: 3px solid var(--ow-red);
+  border-bottom: 3px solid var(--ow-red);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  animation: breathe-red 5s infinite ease-in-out;
+}
+
+.marcador-contenedor {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 60px; /* Ancho seguro para flechas triangulares */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Una arriba, otra abajo */
+  align-items: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.flecha {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent; /* Flechas más limpias */
+  border-right: 20px solid transparent;
+}
+
+.flecha-arriba {
+  border-top: 20px solid var(--ow-red); /* Bloque triangular neón */
+  margin-top: -2px; /* Ajuste para que asome ligeramente */
+  filter: drop-shadow(0 0 10px var(--ow-red));
+}
+
+.flecha-abajo {
+  border-bottom: 20px solid var(--ow-red); /* Bloque triangular neón */
+  margin-bottom: -2px; /* Ajuste para que asome ligeramente */
+  filter: drop-shadow(0 0 10px var(--ow-red));
+}
+
+.pista {
+  display: flex;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: max-content;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+
+.item-personaje {
+  /* ¡CRUCIAL: BLOQUEO ESTRICTO DE ANCHURA A 280PX PARA COINCIDIR CON JS! */
+  min-width: 280px; 
+  max-width: 280px; 
+  width: 280px;     
+  height: 100%;
+  font-size: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box; /* Para que el borde no sume píxeles extra */
+}
+
+.item-personaje img {
+  max-height: 80px; /* Evita que la imagen se salga de la pista (que mide 100px) */
+  max-width: 80%;
+  object-fit: contain; /* Mantiene la proporción de la perk sin deformarla */
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+/* --- CONTENEDOR COMANDOS (COMPACTADO Y REDUCIDO) --- */
+.comandos-container {
+  width: 100%;
+  padding: 10px 0 20px 0; /* Menos padding para ganar espacio vertical */
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio neón tenue entre filas de 15px a 10px */
+}
+
+.fila {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Menos gap horizontal de 20px a 15px */
+  width: 100%;
+}
+
+.columna {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Marcos de comandos con respiración neón */
+.comando-box {
+  min-width: 240px; /* Más compactos de 280 a 240 */
+  padding: 8px 5px; /* Más compactos de 12 a 8 */
+  font-family: 'Quantico', sans-serif;
+  font-size: 28px; /* Fuente reducida de 26px a 22px */
+  font-weight: 700;
+  /*text-transform: uppercase;*/
+  border-radius: 6px; /* Bordes más nítidos */
+  background: rgba(0, 0, 0, 0.85);
+  text-align: center;
+  border: 2px solid white; /* Borde más nítido de 3px a 2px */
+  animation: breathe-white 5s infinite ease-in-out;
+}
+
+.comando-box.big {
+  font-size: 45px; /* Fuente reducida de 36px a 30px */
+  min-width: 350px; /* Más compactos */
+  border-width: 3px; /* Más nítido */
+}
+
+/* --- ESTILOS PARA EL PANEL DE FILTROS --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none; /* Se activa con JS */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #050505;
+    border: 2px solid var(--ow-blue);
+    padding: 20px;
+    width: 85%;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+    box-shadow: 0 0 20px var(--ow-blue);
+}
+
+.modal-content p {
+    font-size: 20px;
+
+}
+
+.grid-personajes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn-personaje {
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-family: 'Anta';
+	font-size: 20px;
+}
+
+.btn-personaje.baneado {
+    border-color: var(--ow-red);
+    color: var(--ow-red);
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Anta';
+    border: none;
+}
+
+/* --- TOGGLE DE CATEGORÍAS --- */
+.toggle-categoria {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-categoria {
+    background: black;
+    color: var(--ow-blue);
+    border: 1px solid var(--ow-blue);
+    font-family: 'Anta', sans-serif;
+    font-size: 22px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.btn-categoria:hover {
+    box-shadow: 0 0 5px var(--ow-blue);
+}
+
+/* Estado activo del botón */
+.btn-categoria.active {
+    background: var(--ow-blue);
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--ow-blue);
+}
+
+.btn-modal.guardar { background: var(--ow-blue); color: black; }
+.btn-modal.cerrar { background: #333; color: white; }
+
+.comando-box.dorado { color: var(--ow-gold); border-color: var(--ow-gold); animation: breathe-gold 5s infinite ease-in-out; }
+.comando-box.azul { color: var(--ow-blue); border-color: var(--ow-blue); animation: breathe-blue 5s infinite ease-in-out; }
+.comando-box.verde { color: var(--ow-green); border-color: var(--ow-green); animation: breathe-green 5s infinite ease-in-out; }
+.comando-box.blanco { color: var(--ow-silver); border-color: var(--ow-silver); animation: breathe-white 5s infinite ease-in-out; }
+
+/* --- ANIMACIONES (MANTENIDAS) --- */
+@keyframes breathe-orange { 0%, 100% { box-shadow: 0 0 5px rgba(249, 158, 26, 0.2); } 50% { box-shadow: 0 0 15px rgba(249, 158, 26, 0.8); } }
+@keyframes breathe-red { 0%, 100% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.2); } 50% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); } }
+@keyframes breathe-white { 0%, 100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); } 50% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); } }
+@keyframes breathe-gold { 0%, 100% { box-shadow: 0 0 5px rgba(255, 202, 40, 0.2); } 50% { box-shadow: 0 0 15px rgba(255, 202, 40, 0.8); } }
+@keyframes breathe-blue { 0%, 100% { box-shadow: 0 0 5px rgba(0, 210, 255, 0.2); } 50% { box-shadow: 0 0 15px rgba(0, 210, 255, 0.8); } }
+@keyframes breathe-green { 0%, 100% { box-shadow: 0 0 5px rgba(57, 255, 20, 0.2); } 50% { box-shadow: 0 0 15px rgba(57, 255, 20, 0.8); } }
+@keyframes glow-silver-gold { 0%, 100% { filter: drop-shadow(0 0 10px var(--ow-silver)); } 50% { filter: drop-shadow(0 0 20px var(--ow-gold)); } }
+.flicker-slow { animation: flicker 5s infinite; }
+@keyframes flicker { 0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; } 20%, 24%, 55% { opacity: 0.5; } }
+@keyframes neon-pulse {
+  from {
+    box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe, inset 0 0 10px #bc13fe;
+  }
+  to {
+    box-shadow: 0 0 20px #bc13fe, 0 0 40px #bc13fe, inset 0 0 20px #bc13fe;
+  }
+}
+
+/* Animación de palpitación exclusiva para el texto */
+@keyframes neon-pulse-text {
+  from {
+    text-shadow: 0 0 5px #bc13fe, 0 0 15px #bc13fe, 0 0 25px #bc13fe;
+  }
+  to {
+    text-shadow: 0 0 25px #bc13fe, 0 0 30px #bc13fe, 0 0 50px #bc13fe, 0 0 70px #bc13fe;
+  }
+}

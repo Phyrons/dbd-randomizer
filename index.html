@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dead By Daylight Randomizer</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <div class="stream-container">
+	<div class="neon-title-wrapper">
+        <h1 class="neon-title" data-text="PROTOCOL: HERO SELECTOR">
+            BLOOD HEX: <span class="flicker-slow">PERKS</span> SELECTOR
+        </h1>
+    </div>
+	
+	<div id="contenedor-numeros">
+      <div class="numero-slot"><span>1</span></div>
+      <div class="numero-slot"><span>2</span></div>
+      <div class="numero-slot"><span>3</span></div>
+      <div class="numero-slot"><span>4</span></div>
+    </div>
+	
+    <div id="contenedor-ganadores">
+	  <div class="slot-ganador" id="slot-0">
+		<div class="rombo-neon"><img src="img/logodbd.webp" alt="?"></div>
+		<h2 class="nombre-ganador">Loading...</</h2>
+		<h3 class="personaje-ganador"></h3>
+	  </div>
+	  <div class="slot-ganador" id="slot-1">
+		<div class="rombo-neon"><img src="img/logodbd.webp" alt="?"></div>
+		<h2 class="nombre-ganador">Loading...</</h2>
+		<h3 class="personaje-ganador"></h3>
+	  </div>
+	  <div class="slot-ganador" id="slot-2">
+		<div class="rombo-neon"><img src="img/logodbd.webp" alt="?"></div>
+		<h2 class="nombre-ganador">Loading...</</h2>
+		<h3 class="personaje-ganador"></h3>
+	  </div>
+	  <div class="slot-ganador" id="slot-3">
+		<div class="rombo-neon"><img src="img/logodbd.webp" alt="?"></div>
+		<h2 class="nombre-ganador">Loading...</h2>
+		<h3 class="personaje-ganador"></h3>
+	  </div>
+	</div>
+
+    <div class="selector-wrapper">
+		<div class="marcador-contenedor">
+			<div class="flecha flecha-arriba"></div>
+			<div class="flecha flecha-abajo"></div>
+		</div>
+		<div id="pista-personajes" class="pista">
+			<div class="item-personaje"><span>?</span></div>
+			<div class="item-personaje"><span>?</span></div>
+			<div class="item-personaje"><span>?</span></div>
+			<div class="item-personaje"><span>?</span></div>
+			<div class="item-personaje"><span>?</span></div>
+			<div class="item-personaje"><span>?</span></div>
+		</div>
+	</div>
+	
+	<div id="modal-filtros" class="modal-overlay" style="display:none;">
+		<div class="modal-content">
+			<h2 class="neon-text">CHARACTER FILTER</h2>
+			<p>Pick the characters you want to exclude:</p>
+			
+			<div id="contenedor-checkboxes" class="grid-personajes"></div>
+			
+			<div class="modal-actions">
+				<button class="btn-modal guardar" onclick="guardarFiltros()">SAVE</button>
+				<button class="btn-modal cerrar" onclick="document.getElementById('modal-filtros').style.display='none'">EXIT</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="comandos-container">
+		<div class="fila">
+			<div class="columna">
+				<div class="comando-box">
+					<label style="font-size: 20px; display: block;">CATEGORY</label>
+					<div class="toggle-categoria">
+						<button id="btn-surv" class="btn-categoria active" onclick="cambiarCategoria('perksurv')">SURVIVOR</button>
+						<button id="btn-killer" class="btn-categoria" onclick="cambiarCategoria('perkkiller')">KILLER</button>
+					</div>
+				</div>
+			</div>
+			<div class="columna">
+				<div class="comando-box azul" onclick="abrirPanelFiltros()" style="cursor:pointer;">FILTERS</div>
+			</div>
+			<div class="columna">
+				<div class="comando-box dorado big" onclick="toggleIdioma()" style="cursor:pointer;">!lan eng/esp</div>
+			</div>
+		</div>
+		<div class="fila">
+			<div class="columna"><div class="comando-box big blanco" onclick="procesarGiroRuleta('perksurv', 0)" style="cursor:pointer;">!rollsurv</div></div>
+			
+			<div class="columna"><div class="comando-box big blanco" onclick="ejecutarRerollSeleccionado()" style="cursor:pointer;">!reroll</div></div>
+    
+			<div class="columna">
+				<div class="comando-box big blanco">
+					<div class="toggle-categoria">
+						<button id="num-1" class="btn-categoria active" onclick="seleccionarSlotReroll(1)">1</button>
+						<button id="num-2" class="btn-categoria" onclick="seleccionarSlotReroll(2)">2</button>
+						<button id="num-3" class="btn-categoria" onclick="seleccionarSlotReroll(3)">3</button>
+						<button id="num-4" class="btn-categoria" onclick="seleccionarSlotReroll(4)">4</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="columna"><div class="comando-box big blanco" onclick="procesarGiroRuleta('perkkiller', 0)" style="cursor:pointer;">!rollkiller</div></div>
+		</div>
+	</div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
