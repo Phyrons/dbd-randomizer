@@ -31,9 +31,8 @@
 2.  Check the **"Local File"** box.
 3.  Click **Browse** and select the `index.html` file from the project folder.
 4.  Set **Width** to `1920` and **Height** to `1080`.
-5.  Scroll down and click the **"Refresh cache of current page"** button a couple of times.
-6.  Keep other settings as default and click **OK**.
-7.  Adjust the source on your screen and lock it if desired.
+5.  Keep other settings as default and click **OK**.
+6.  Adjust the source on your screen and lock it if desired.
 
 ### ⚙️ 3. Linking Actions
 1.  In Streamer.bot, go to **Actions & Queues** > **Actions**.
@@ -42,7 +41,22 @@
     * The first sub-action is the link to your OBS source.
     * **Double-click it** and re-select your OBS Browser Source to ensure the connection is active.
 
-### ⌨️ 4. Chat Commands
+### ⚠️ 4. Essential Final Steps (Connection & Commands)
+To ensure the app communicates correctly with Streamer.bot and your chat, follow these steps:
+
+1.  **Enable Commands**:
+    * In the left menu of Streamer.bot, click **Commands**.
+    * Find the **"Spinners"** group.
+    * Right-click each command and select **Enabled**.
+2.  **Activate WebSocket Server**:
+    * Go to **Servers/Clients** > **Custom WebSocket Servers**.
+    * Double-click **"Spinner DBD (ws://127.0.0.1:8090/)"**.
+    * Check **"Auto Start on Startup"** and click **OK**.
+    * Right-click the server entry and select **Start**.
+3.  **Final Sync**:
+    * In OBS, double-click your Browser Source and click the **"Refresh cache of current page"** button a couple of times. This ensures the app links with the newly started server.
+
+### ⌨️ 5. Chat Commands
 | Command | Description |
 | :--- | :--- |
 | `!lan es` | Changes perk names and UI to **Spanish**. |
@@ -51,9 +65,7 @@
 | `!rollsurv` | Starts the spinner for **Survivor** perks. |
 | `!reroll [number]` | Rerolls a specific slot (e.g., `!reroll 3` will spin the 3rd slot again). |
 
-*Note: The **Spinner Chat Log** action sends automatic messages to chat. You can disable this action if you prefer.*
-
-### 🔍 5. Perk Filters (Character Bans)
+### 🔍 6. Perk Filters (Character Bans)
 1.  In OBS, right-click your "Spinner DBD" browser source and select **Interact**.
 2.  Click on **"SURVIVOR"** or **"KILLER"** to choose a category.
 3.  Click the **"FILTERS"** button.
@@ -82,8 +94,7 @@
 2.  Marca la casilla **"Archivo Local"**.
 3.  Presiona **Examinar** y selecciona el archivo `index.html` de la carpeta descargada.
 4.  En **Ancho** pon `1920` y en **Alto** `1080`.
-5.  Hasta abajo, presiona un par de veces el botón **"Actualizar la caché de la página actual"**.
-6.  Presiona **Aceptar**, ajusta la fuente a tu gusto en pantalla y bloquéala.
+5.  Presiona **Aceptar**, ajusta la fuente a tu gusto en pantalla y bloquéala.
 
 ### ⚙️ 3. Vincular Acciones
 1.  En Streamer.bot, ve a **Actions & Queues** > **Actions**.
@@ -92,7 +103,22 @@
     * La primera sub-acción es el vínculo con tu OBS.
     * Dale **doble click** y vuelve a seleccionar tu fuente de OBS para asegurar que estén vinculados correctamente.
 
-### ⌨️ 4. Comandos del Chat
+### ⚠️ 4. Pasos Finales Críticos (Conexión y Comandos)
+Para asegurar que la ruleta se comunique correctamente con el chat y OBS, realiza lo siguiente:
+
+1.  **Activar los comandos**: 
+    * En el menú de la izquierda en Streamer.bot, presiona la opción **Commands**.
+    * Busca el grupo **"Spinners"**.
+    * En cada uno de los comandos, haz clic derecho y activa la casilla **Enabled**.
+2.  **Activar el Custom WebSocket Server**:
+    * Ve a la opción **Servers/Clients** y luego a **Custom WebSocket Servers**.
+    * Dale doble clic a **"Spinner DBD (ws://127.0.0.1:8090/)"**.
+    * Activa la opción **"Auto Start on Startup"** y presiona **Ok**.
+    * Finalmente, haz clic derecho sobre el servidor y selecciona **Start**.
+3.  **Sincronización Final**: 
+    * En OBS, entra a las propiedades de tu fuente de navegador (doble clic) y presiona un par de veces el botón **"Actualizar la caché de la página actual"**. Esto asegurará la conexión total de la app con Streamer.bot.
+
+### ⌨️ 5. Comandos del Chat
 | Comando | Descripción |
 | :--- | :--- |
 | `!lan es` | Cambia el idioma de las perks a **Español**. |
@@ -101,16 +127,12 @@
 | `!rollsurv` | Inicia la ruleta con perks de **Superviviente**. |
 | `!reroll [núm]` | Gira de nuevo un slot específico (Ej: `!reroll 3` cambiará la 3ra perk). |
 
-*Nota: La acción **Spinner Chat Log** envía mensajes automáticos al chat; puedes desactivarla si lo prefieres.*
-
-### 🔍 5. Filtros de Perks (Banear Personajes)
-1.  En OBS, haz clic derecho en la fuente "Spinner DBD" y selecciona **Interactuar**.
+### 🔍 6. Filtros de Perks (Banear Personajes)
+1.  In OBS, haz clic derecho en la fuente "Spinner DBD" y selecciona **Interactuar**.
 2.  Haz clic en **"SURVIVOR"** o **"KILLER"** para elegir la categoría.
 3.  Presiona el botón **"FILTERS"**.
 4.  Selecciona los personajes que no quieres que aparezcan (se pondrán en **rojo**).
 5.  Presiona **SAVE** y listo.
 
 ---
-**Developed with ❤️ for LunarPrincess29.**  
-**Thank you so much, LunarPrincess29, for all your love and support. This app is dedicated 100% to you ❤️**  
-**https://www.twitch.tv/lunarprincess29**
+**Developed with ❤️ for LunarPrincess29.** **Thank you so much, LunarPrincess29, for all your love and support. This app is dedicated 100% to you ❤️** **https://www.twitch.tv/lunarprincess29**
