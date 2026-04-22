@@ -111,4 +111,6 @@
 5.  Presiona **SAVE** y listo.
 
 ---
-**Developed with ❤️ for the DBD Community.**
+**Developed with ❤️ for LunarPrincess29.**
+**Thank you so much, LunarPrincess29, for all your love and support. This app is dedicated 100% to you ❤️**
+**https://www.twitch.tv/lunarprincess29**
