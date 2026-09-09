@@ -224,7 +224,7 @@ function mostrarGanador(personaje, forcedIndex = null) {
 
     if (personaje.sinPerk) {
         img.src = "img/logodbd.webp";
-        nombre.textContent = "Sin Perk";
+        nombre.textContent = "No Perk";
         personajeTxt.textContent = "";
     } else {
         img.src = `img/${personaje.archivo}`;
