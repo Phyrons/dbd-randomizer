@@ -1,0 +1,1621 @@
+[
+  {
+    "nombre": "Bound by Obsession",
+    "nombre_es": "Unión Obsesiva",
+    "personaje": "General Perk",
+    "archivo": "BoundbyObsession.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Dark Sense",
+    "nombre_es": "Percepción Oscura",
+    "personaje": "General Perk",
+    "archivo": "DarkSense.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Déjà Vu",
+    "nombre_es": "Déjà Vu",
+    "personaje": "General Perk",
+    "archivo": "DejaVu.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Down to the Last",
+    "nombre_es": "Hasta Terminar con el Último",
+    "personaje": "General Perk",
+    "archivo": "DowntotheLast.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hope",
+    "nombre_es": "Esperanza",
+    "personaje": "General Perk",
+    "archivo": "Hope.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Kindred",
+    "nombre_es": "Familia",
+    "personaje": "General Perk",
+    "archivo": "Kindred.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Lightweight",
+    "nombre_es": "De Pies Ligeros",
+    "personaje": "General Perk",
+    "archivo": "Lightweight.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "No One Left Behind",
+    "nombre_es": "Nadie Se Queda Atrás",
+    "personaje": "General Perk",
+    "archivo": "NoOneLeftBehind.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Plunderer's Instinct",
+    "nombre_es": "Instinto de Saqueador",
+    "personaje": "General Perk",
+    "archivo": "PlunderersInstinct.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Premonition",
+    "nombre_es": "Premonición",
+    "personaje": "General Perk",
+    "archivo": "Premonition.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Resilience",
+    "nombre_es": "Resilencia",
+    "personaje": "General Perk",
+    "archivo": "Resilience.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Slippery Meat",
+    "nombre_es": "Carne Resbaladiza",
+    "personaje": "General Perk",
+    "archivo": "SlipperyMeat.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Small Game",
+    "nombre_es": "Caza Menor",
+    "personaje": "General Perk",
+    "archivo": "SmallGame.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Spine Chill",
+    "nombre_es": "Escalofríos",
+    "personaje": "General Perk",
+    "archivo": "SpineChill.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "This Is Not Happening",
+    "nombre_es": "Esto No Puede Estar Pasando",
+    "personaje": "General Perk",
+    "archivo": "ThisIsNotHappening.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "We'll Make It",
+    "nombre_es": "Sobreviviremos",
+    "personaje": "General Perk",
+    "archivo": "WellMakeIt.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Will to Live",
+    "nombre_es": "Ganas de Vivir",
+    "personaje": "General Perk",
+    "archivo": "WilltoLive.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Bond",
+    "nombre_es": "Vínculo",
+    "personaje": "Dwight Fairfield",
+    "archivo": "Bond.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Leader",
+    "nombre_es": "Líder",
+    "personaje": "Dwight Fairfield",
+    "archivo": "Leader.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Prove Thyself",
+    "nombre_es": "Demuestra Lo Que Vales",
+    "personaje": "Dwight Fairfield",
+    "archivo": "ProveThyself.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Adrenaline",
+    "nombre_es": "Adrenalina",
+    "personaje": "Meg Thomas",
+    "archivo": "Adrenaline.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Quick & Quiet",
+    "nombre_es": "Velocidad Silenciosa",
+    "personaje": "Meg Thomas",
+    "archivo": "QuickQuiet.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Sprint Burst",
+    "nombre_es": "Esprint",
+    "personaje": "Meg Thomas",
+    "archivo": "SprintBurst.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Botany Knowledge",
+    "nombre_es": "Conocimientos de Botánica",
+    "personaje": "Claudette Morel",
+    "archivo": "BotanyKnowledge.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Empathy",
+    "nombre_es": "Empatía",
+    "personaje": "Claudette Morel",
+    "archivo": "Empathy.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Self-Care",
+    "nombre_es": "Autocuración",
+    "personaje": "Claudette Morel",
+    "archivo": "Self-Care.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Calm Spirit",
+    "nombre_es": "Espíritu Calmado",
+    "personaje": "Jake Park",
+    "archivo": "CalmSpirit.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Iron Will",
+    "nombre_es": "Voluntad de Hierro",
+    "personaje": "Jake Park",
+    "archivo": "IronWill.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Saboteur",
+    "nombre_es": "Sabotear",
+    "personaje": "Jake Park",
+    "archivo": "Saboteur.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Balanced Landing",
+    "nombre_es": "Caída Equilibrada",
+    "personaje": "Nea Karlsson",
+    "archivo": "BalancedLanding.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Streetwise",
+    "nombre_es": "De La Calle",
+    "personaje": "Nea Karlsson",
+    "archivo": "Streetwise.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Urban Evasion",
+    "nombre_es": "Evasión Urbana",
+    "personaje": "Nea Karlsson",
+    "archivo": "UrbanEvasion.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Decisive Strike",
+    "nombre_es": "Golpe Decisivo",
+    "personaje": "Laurie Strode",
+    "archivo": "DecisiveStrike.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Object of Obsession",
+    "nombre_es": "Unión Obsesiva",
+    "personaje": "Laurie Strode",
+    "archivo": "ObjectofObsession.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Sole Survivor",
+    "nombre_es": "Hasta Terminar Con El Último",
+    "personaje": "Laurie Strode",
+    "archivo": "SoleSurvivor.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Ace in the Hole",
+    "nombre_es": "As En La Manga",
+    "personaje": "Ace Visconti",
+    "archivo": "AceintheHole.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Open-Handed",
+    "nombre_es": "A Mano Descubierta",
+    "personaje": "Ace Visconti",
+    "archivo": "Open-Handed.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Up the Ante",
+    "nombre_es": "Subir Las Apuestas",
+    "personaje": "Ace Visconti",
+    "archivo": "UptheAnte.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Borrowed Time",
+    "nombre_es": "Tiempo Prestado",
+    "personaje": "Bill Overbeck",
+    "archivo": "BorrowedTime.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Left Behind",
+    "nombre_es": "Abandonado A Tu Suerte",
+    "personaje": "Bill Overbeck",
+    "archivo": "LeftBehind.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Unbreakable",
+    "nombre_es": "Inquebrantable",
+    "personaje": "Bill Overbeck",
+    "archivo": "Unbreakable.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Alert",
+    "nombre_es": "Alerta",
+    "personaje": "Feng Min",
+    "archivo": "Alert.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Lithe",
+    "nombre_es": "Agilidad",
+    "personaje": "Feng Min",
+    "archivo": "Lithe.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Technician",
+    "nombre_es": "Pericia Técnica",
+    "personaje": "Feng Min",
+    "archivo": "Technician.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Dead Hard",
+    "nombre_es": "Fajador",
+    "personaje": "David King",
+    "archivo": "DeadHard.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "No Mither",
+    "nombre_es": "Me Da Igual",
+    "personaje": "David King",
+    "archivo": "NoMither.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "We're Gonna Live Forever",
+    "nombre_es": "Vamos A Vivir Para Siempre",
+    "personaje": "David King",
+    "archivo": "WereGonnaLiveForever.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Pharmacy",
+    "nombre_es": "Farmacia",
+    "personaje": "Quentin Smith",
+    "archivo": "Pharmacy.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Vigil",
+    "nombre_es": "Vigilia",
+    "personaje": "Quentin Smith",
+    "archivo": "Vigil.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Wake Up!",
+    "nombre_es": "¡Despierta!",
+    "personaje": "Quentin Smith",
+    "archivo": "WakeUp.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Detective's Hunch",
+    "nombre_es": "Corazonada",
+    "personaje": "Detective David Tapp",
+    "archivo": "DetectivesHunch.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Stake Out",
+    "nombre_es": "Bajo Vigilancia",
+    "personaje": "Detective David Tapp",
+    "archivo": "StakeOut.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Tenacity",
+    "nombre_es": "Tenacidad",
+    "personaje": "Detective David Tapp",
+    "archivo": "Tenacity.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Boil Over",
+    "nombre_es": "Arrebato",
+    "personaje": "Kate Denson",
+    "archivo": "BoilOver.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Dance With Me",
+    "nombre_es": "Baila Conmigo",
+    "personaje": "Kate Denson",
+    "archivo": "DanceWithMe.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Windows of Opportunity",
+    "nombre_es": "Oportunidades",
+    "personaje": "Kate Denson",
+    "archivo": "WindowsofOpportunity.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Autodidact",
+    "nombre_es": "Autodidacta",
+    "personaje": "Adam Francis",
+    "archivo": "Autodidact.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Deliverance",
+    "nombre_es": "Liberación",
+    "personaje": "Adam Francis",
+    "archivo": "Deliverance.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Diversion",
+    "nombre_es": "Distracción",
+    "personaje": "Adam Francis",
+    "archivo": "Diversion.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Aftercare",
+    "nombre_es": "Postratamiento",
+    "personaje": "Jeff Johansen",
+    "archivo": "Aftercare.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Breakdown",
+    "nombre_es": "Ruptura",
+    "personaje": "Jeff Johansen",
+    "archivo": "Breakdown.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Distortion",
+    "nombre_es": "Distorsión",
+    "personaje": "Jeff Johansen",
+    "archivo": "Distortion.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Head On",
+    "nombre_es": "De Frente",
+    "personaje": "Jane Romero",
+    "archivo": "HeadOn.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Poised",
+    "nombre_es": "Serenidad",
+    "personaje": "Jane Romero",
+    "archivo": "Poised.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Solidarity",
+    "nombre_es": "Solidaridad",
+    "personaje": "Jane Romero",
+    "archivo": "Solidarity.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Buckle Up",
+    "nombre_es": "Sujétate",
+    "personaje": "Ash Williams",
+    "archivo": "BuckleUp.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Flip-Flop",
+    "nombre_es": "Nos Vemos",
+    "personaje": "Ash Williams",
+    "archivo": "Flip-Flop.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Mettle of Man",
+    "nombre_es": "El Temple Del Hombre",
+    "personaje": "Ash Williams",
+    "archivo": "MettleofMan.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Better Together",
+    "nombre_es": "Mejor Juntos",
+    "personaje": "Nancy Wheeler",
+    "archivo": "BetterTogether.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Fixated",
+    "nombre_es": "Fijación",
+    "personaje": "Nancy Wheeler",
+    "archivo": "Fixated.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Inner Strength",
+    "nombre_es": "Fuerza Interior",
+    "personaje": "Nancy Wheeler",
+    "archivo": "InnerStrength.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Babysitter",
+    "nombre_es": "Niñero",
+    "personaje": "Steve Harrington",
+    "archivo": "Babysitter.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Camaraderie",
+    "nombre_es": "Camaradería",
+    "personaje": "Steve Harrington",
+    "archivo": "Camaraderie.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Second Wind",
+    "nombre_es": "Segundo Aliento",
+    "personaje": "Steve Harrington",
+    "archivo": "SecondWind.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Any Means Necessary",
+    "nombre_es": "Por Cualquier Miedo",
+    "personaje": "Yui Kimura",
+    "archivo": "AnyMeansNecessary.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Breakout",
+    "nombre_es": "Fuga",
+    "personaje": "Yui Kimura",
+    "archivo": "Breakout.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Lucky Break",
+    "nombre_es": "Golpe De Suerte",
+    "personaje": "Yui Kimura",
+    "archivo": "LuckyBreak.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "For the People",
+    "nombre_es": "Por La Gente",
+    "personaje": "Zarina Kassir",
+    "archivo": "ForthePeople.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Off the Record",
+    "nombre_es": "Extraoficialmente",
+    "personaje": "Zarina Kassir",
+    "archivo": "OfftheRecord.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Red Herring",
+    "nombre_es": "Arenque Rojo",
+    "personaje": "Zarina Kassir",
+    "archivo": "RedHerring.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Blood Pact",
+    "nombre_es": "Pacto De Sangre",
+    "personaje": "Cheryl Mason",
+    "archivo": "BloodPact.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Repressed Alliance",
+    "nombre_es": "Alianza Reprimida",
+    "personaje": "Cheryl Mason",
+    "archivo": "RepressedAlliance.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Soul Guard",
+    "nombre_es": "Defensa Del Alma",
+    "personaje": "Cheryl Mason",
+    "archivo": "SoulGuard.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Built to Last",
+    "nombre_es": "Diseñado Para Durar",
+    "personaje": "Felix Richter",
+    "archivo": "BuilttoLast.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Desperate Measures",
+    "nombre_es": "Medidas Desesperadas",
+    "personaje": "Felix Richter",
+    "archivo": "DesperateMeasures.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Visionary",
+    "nombre_es": "Visionario",
+    "personaje": "Felix Richter",
+    "archivo": "Visionary.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Appraisal",
+    "nombre_es": "",
+    "personaje": "Élodie Rakoto",
+    "archivo": "Appraisal.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Deception",
+    "nombre_es": "Engaño",
+    "personaje": "Élodie Rakoto",
+    "archivo": "Deception.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Power Struggle",
+    "nombre_es": "Lucha de Poderes",
+    "personaje": "Élodie Rakoto",
+    "archivo": "PowerStruggle.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Fast Track",
+    "nombre_es": "Vía Rápida",
+    "personaje": "Lee Yun-jin",
+    "archivo": "FastTrack.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Self-Preservation",
+    "nombre_es": "Autopreservación",
+    "personaje": "Lee Yun-jin",
+    "archivo": "Self-Preservation.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Smash Hit",
+    "nombre_es": "Éxito Arrollador",
+    "personaje": "Lee Yun-jin",
+    "archivo": "SmashHit.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Blast Mine",
+    "nombre_es": "Mina Cegadora",
+    "personaje": "Jill Valentine",
+    "archivo": "BlastMine.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Counterforce",
+    "nombre_es": "Contramedida",
+    "personaje": "Jill Valentine",
+    "archivo": "Counterforce.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Resurgence",
+    "nombre_es": "Resurgimiento",
+    "personaje": "Jill Valentine",
+    "archivo": "Resurgence.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Bite the Bullet",
+    "nombre_es": "Aguante El Dolor",
+    "personaje": "Leon Scott Kennedy",
+    "archivo": "BitetheBullet.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Flashbang",
+    "nombre_es": "Granada Aturdidora",
+    "personaje": "Leon Scott Kennedy",
+    "archivo": "Flashbang.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Rookie Spirit",
+    "nombre_es": "Espíritu Novato",
+    "personaje": "Leon Scott Kennedy",
+    "archivo": "RookieSpirit.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Boon: Circle of Healing",
+    "nombre_es": "Bendición: Círculo De Curación",
+    "personaje": "Mikaela Reid",
+    "archivo": "BoonCircleofHealing.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Boon: Shadow Step",
+    "nombre_es": "Bendición: Paso De Las Sombras",
+    "personaje": "Mikaela Reid",
+    "archivo": "BoonShadowStep.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Clairvoyance",
+    "nombre_es": "Clarividencia",
+    "personaje": "Mikaela Reid",
+    "archivo": "Clairvoyance.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Boon: Exponential",
+    "nombre_es": "Bendición: Exponencial",
+    "personaje": "Jonah Vasquez",
+    "archivo": "BoonExponential.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Corrective Action",
+    "nombre_es": "Correción",
+    "personaje": "Jonah Vasquez",
+    "archivo": "CorrectiveAction.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Overcome",
+    "nombre_es": "Superar",
+    "personaje": "Jonah Vasquez",
+    "archivo": "Overcome.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Boon: Dark Theory",
+    "nombre_es": "Bendición: Teoría Oscura",
+    "personaje": "Yoichi Asakawa",
+    "archivo": "BoonDarkTheory.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Empathic Connection",
+    "nombre_es": "Conexión Empática",
+    "personaje": "Yoichi Asakawa",
+    "archivo": "EmpathicConnection.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Parental Guidance",
+    "nombre_es": "Consejos de Papá",
+    "personaje": "Yoichi Asakawa",
+    "archivo": "ParentalGuidance.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Inner Focus",
+    "nombre_es": "Enfoque Interno",
+    "personaje": "Haddie Kaur",
+    "archivo": "InnerFocus.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Overzealous",
+    "nombre_es": "Demasiado Entusiasta",
+    "personaje": "Haddie Kaur",
+    "archivo": "Overzealous.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Residual Manifest",
+    "nombre_es": "Manifieto Residual",
+    "personaje": "Haddie Kaur",
+    "archivo": "ResidualManifest.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Low Profile",
+    "nombre_es": "Perfil Bajo",
+    "personaje": "Ada Wong",
+    "archivo": "LowProfile.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Reactive Healing",
+    "nombre_es": "Curación Reactiva",
+    "personaje": "Ada Wong",
+    "archivo": "ReactiveHealing.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Wiretap",
+    "nombre_es": "Sistema De Espionaje",
+    "personaje": "Ada Wong",
+    "archivo": "Wiretap.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Better than New",
+    "nombre_es": "Mejor Que Nuevo",
+    "personaje": "Rebecca Chambers",
+    "archivo": "BetterthanNew.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hyperfocus",
+    "nombre_es": "Hiperconcentración",
+    "personaje": "Rebecca Chambers",
+    "archivo": "Hyperfocus.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Reassurance",
+    "nombre_es": "Consuelo",
+    "personaje": "Rebecca Chambers",
+    "archivo": "Reassurance.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Fogwise",
+    "nombre_es": "Conocimiento de la Niebla",
+    "personaje": "Vittorio Toscano",
+    "archivo": "Fogwise.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Potential Energy",
+    "nombre_es": "Energía Potencial",
+    "personaje": "Vittorio Toscano",
+    "archivo": "PotentialEnergy.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Quick Gambit",
+    "nombre_es": "Táctica Rápida",
+    "personaje": "Vittorio Toscano",
+    "archivo": "QuickGambit.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Cut Loose",
+    "nombre_es": "Suéltate",
+    "personaje": "Thalita Lyra",
+    "archivo": "CutLoose.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Friendly Competition",
+    "nombre_es": "Competencia Amistosa",
+    "personaje": "Thalita Lyra",
+    "archivo": "FriendlyCompetition.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Teamwork: Power of Two",
+    "nombre_es": "Trabajo EN Equipo: El Poder De Dos",
+    "personaje": "Thalita Lyra",
+    "archivo": "TeamworkPowerofTwo.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Background Player",
+    "nombre_es": "Personaje Secundario",
+    "personaje": "Renato Lyra",
+    "archivo": "BackgroundPlayer.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Blood Rush",
+    "nombre_es": "Impulso Sangriento",
+    "personaje": "Renato Lyra",
+    "archivo": "BloodRush.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Teamwork: Collective Stealth",
+    "nombre_es": "trabajo En Equipo: Sigilo Colectivo",
+    "personaje": "Renato Lyra",
+    "archivo": "TeamworkCollectiveStealth.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Made for This",
+    "nombre_es": "Nacido Para Esto",
+    "personaje": "Gabriel Soma",
+    "archivo": "MadeforThis.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Scavenger",
+    "nombre_es": "Chatarrero",
+    "personaje": "Gabriel Soma",
+    "archivo": "Scavenger.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Troubleshooter",
+    "nombre_es": "Solucionador De Problemas",
+    "personaje": "Gabriel Soma",
+    "archivo": "Troubleshooter.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Dramaturgy",
+    "nombre_es": "Dramaturgia",
+    "personaje": "Nicolas Cage",
+    "archivo": "Dramaturgy.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Plot Twist",
+    "nombre_es": "Giro Argumental",
+    "personaje": "Nicolas Cage",
+    "archivo": "PlotTwist.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Scene Partner",
+    "nombre_es": "Compañero De Escena",
+    "personaje": "Nicolas Cage",
+    "archivo": "ScenePartner.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Chemical Trap",
+    "nombre_es": "Trampa Química",
+    "personaje": "Ellen Ripley",
+    "archivo": "ChemicalTrap.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Light-Footed",
+    "nombre_es": "Ágil",
+    "personaje": "Ellen Ripley",
+    "archivo": "Light-Footed.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Lucky Star",
+    "nombre_es": "Estrella De La Suerte",
+    "personaje": "Ellen Ripley",
+    "archivo": "LuckyStar.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Boon: Illumination",
+    "nombre_es": "Bendición: Iluminación",
+    "personaje": "Alan Wake",
+    "archivo": "BoonIllumination.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Champion of Light",
+    "nombre_es": "Campeón De La Luz",
+    "personaje": "Alan Wake",
+    "archivo": "ChampionofLight.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Deadline",
+    "nombre_es": "Fecha Límite",
+    "personaje": "Alan Wake",
+    "archivo": "Deadline.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Invocation: Weaving Spiders",
+    "nombre_es": "Invocación: Arañas Tejedoras",
+    "personaje": "Sable Ward",
+    "archivo": "InvocationWeavingSpiders.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Strength in Shadows",
+    "nombre_es": "Fortaleza En Las Sombras",
+    "personaje": "Sable Ward",
+    "archivo": "StrengthinShadows.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Wicked",
+    "nombre_es": "Malicia",
+    "personaje": "Sable Ward",
+    "archivo": "Wicked.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Bardic Inspiration",
+    "nombre_es": "Inspiración Bárdica",
+    "personaje": "Aestri Yazar & Baermar Uraz",
+    "archivo": "BardicInspiration.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Mirrored Illusion",
+    "nombre_es": "Ilusión Reflejada",
+    "personaje": "Aestri Yazar & Baermar Uraz",
+    "archivo": "MirroredIllusion.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Still Sight",
+    "nombre_es": "Mirada Fija",
+    "personaje": "Aestri Yazar & Baermar Uraz",
+    "archivo": "StillSight.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Finesse",
+    "nombre_es": "Elegancia",
+    "personaje": "Lara Croft",
+    "archivo": "Finesse.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hardened",
+    "nombre_es": "Endurecida",
+    "personaje": "Lara Croft",
+    "archivo": "Hardened.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Specialist",
+    "nombre_es": "Especialista",
+    "personaje": "Lara Croft",
+    "archivo": "Specialist.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Exultation",
+    "nombre_es": "Exultación",
+    "personaje": "Trevor Belmont",
+    "archivo": "Exultation.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Eyes of Belmont",
+    "nombre_es": "Ojos De Belmont",
+    "personaje": "Trevor Belmont",
+    "archivo": "EyesofBelmont.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Moment of Glory",
+    "nombre_es": "Momento De Gloria",
+    "personaje": "Trevor Belmont",
+    "archivo": "MomentofGlory.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Clean Break",
+    "nombre_es": "Punto Y Aparte",
+    "personaje": "Taurie Cain",
+    "archivo": "CleanBreak.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Inv: Treacherous Crows",
+    "nombre_es": "Invocación: Cuervos Traicioneros",
+    "personaje": "Taurie Cain",
+    "archivo": "InvTreacherousCrows.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Shoulder the Burden",
+    "nombre_es": "Cargar A Cuestas",
+    "personaje": "Taurie Cain",
+    "archivo": "ShouldertheBurden.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Do No Harm",
+    "nombre_es": "No Hagas Daño",
+    "personaje": "Orela Rose",
+    "archivo": "DoNoHarm.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Duty of Care",
+    "nombre_es": "El Deber De Cuidar",
+    "personaje": "Orela Rose",
+    "archivo": "DutyofCare.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Rapid Response",
+    "nombre_es": "Respuesta Rápida",
+    "personaje": "Orela Rose",
+    "archivo": "RapidResponse.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Apocalyptic Ingenuity",
+    "nombre_es": "Ingenio Apocalíptico",
+    "personaje": "Rick Grimes",
+    "archivo": "ApocalypticIngenuity.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Come and Get Me!",
+    "nombre_es": "¡Ven Por Mí!",
+    "personaje": "Rick Grimes",
+    "archivo": "ComeandGetMe.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Teamwork: Toughen Up",
+    "nombre_es": "Trabajo En Equipo: Entereza",
+    "personaje": "Rick Grimes",
+    "archivo": "TeamworkToughenUp.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Conviction",
+    "nombre_es": "Convicción",
+    "personaje": "Michonne Grimes",
+    "archivo": "Conviction.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Last Stand",
+    "nombre_es": "Último Enfrentamiento",
+    "personaje": "Michonne Grimes",
+    "archivo": "LastStand.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Teamwork: Throw Down",
+    "nombre_es": "Teamwork En Equipo: Lanzamiento",
+    "personaje": "Michonne Grimes",
+    "archivo": "TeamworkThrowDown.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Ghost Notes",
+    "nombre_es": "Notas Fatasma",
+    "personaje": "Vee Boonyasak",
+    "archivo": "GhostNotes.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "One-Two-Three-Four!",
+    "nombre_es": "¡Uno, Dos, Tres, Cuatro!",
+    "personaje": "Vee Boonyasak",
+    "archivo": "One-Two-Three-Four.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Road Life",
+    "nombre_es": "Vida Itinerante",
+    "personaje": "Vee Boonyasak",
+    "archivo": "RoadLife.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Bada Bada Boom",
+    "nombre_es": "Bada, Bada, Bum",
+    "personaje": "Dustin Henderson",
+    "archivo": "BadaBadaBoom.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Change of Plan",
+    "nombre_es": "Cambio De planes",
+    "personaje": "Dustin Henderson",
+    "archivo": "ChangeofPlan.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Teamwork: Full Circuit",
+    "nombre_es": "Trabajo En Equipo: Circuito Completo",
+    "personaje": "Dustin Henderson",
+    "archivo": "TeamworkFullCircuit.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Extrasensory Perception",
+    "nombre_es": "Percepción Extrasensorial",
+    "personaje": "Jane Hopper — Eleven",
+    "archivo": "ExtrasensoryPerception.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Teamwork: Soft-Spoken",
+    "nombre_es": "Trabajo En Equipo: Tono Gentil",
+    "personaje": "Jane Hopper — Eleven",
+    "archivo": "TeamworkSoft-Spoken.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "We See You",
+    "nombre_es": "Te Vemos",
+    "personaje": "Jane Hopper — Eleven",
+    "archivo": "WeSeeYou.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "A Place For Us",
+    "nombre_es": "un Lugar Para Nosotros",
+    "personaje": "Kwon Tae-young",
+    "archivo": "APlaceForUs.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Five Moves Ahead",
+    "nombre_es": "Cinco Movimientos Adelante",
+    "personaje": "Kwon Tae-young",
+    "archivo": "FiveMovesAhead.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Flow State",
+    "nombre_es": "Estado De Flujo",
+    "personaje": "Kwon Tae-young",
+    "archivo": "FlowState.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Cross-Examination",
+    "nombre_es": "Interrogatorio",
+    "personaje": "Shane Wiigwaas",
+    "archivo": "CrossExamination.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Lend a Hand",
+    "nombre_es": "Echar una Mano",
+    "personaje": "Shane Wiigwaas",
+    "archivo": "LendaHand.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Wide Open Throttle",
+    "nombre_es": "Máxima Velocidad",
+    "personaje": "Shane Wiigwaas",
+    "archivo": "WideOpenThrottle.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Boon: Steadfast",
+    "nombre_es": "Bendición: Determinación",
+    "personaje": "Aurora Stardotter",
+    "archivo": "BoonSteadfast.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Fruits of Your Labor",
+    "nombre_es": "Cosechas lo que Siembras",
+    "personaje": "Aurora Stardotter",
+    "archivo": "FruitsOfYourLabor.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Salvation's Cry",
+    "nombre_es": "Grito de Salvación",
+    "personaje": "Aurora Stardotter",
+    "archivo": "SalvationsCry.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "sinPerk": true,
+    "nombre": "No Perk",
+    "nombre_es": "Sin Perk",
+    "personaje": "",
+    "archivo": "logodbd.webp",
+    "audios": []
+  }
+]
