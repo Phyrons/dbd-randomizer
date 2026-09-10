@@ -31,7 +31,7 @@ function normalizarIdioma(idioma) {
 
     // Streamer.bot puede recibir/enviar "ing", mientras que la aplicación
     // utiliza "eng" internamente.
-    if (valor === "ing" || valor === "en" || valor === "english") return "eng";
+    if (valor === "eng" || valor === "ing" || valor === "en" || valor === "english") return "eng";
     if (valor === "esp" || valor === "es" || valor === "spanish") return "esp";
 
     return null;
