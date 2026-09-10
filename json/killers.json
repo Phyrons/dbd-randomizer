@@ -1,0 +1,1369 @@
+[
+  {
+    "nombre": "Bitter Murmur",
+    "nombre_es": "Murmullo Amargo",
+    "personaje": "All",
+    "archivo": "BitterMurmur.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Cull the Weak",
+    "nombre_es": "Sacrifica a los Débiles",
+    "personaje": "All",
+    "archivo": "CulltheWeak.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Deerstalker",
+    "nombre_es": "Acechador De Ciervos",
+    "personaje": "All",
+    "archivo": "Deerstalker.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Distressing",
+    "nombre_es": "Desasosiego",
+    "personaje": "All",
+    "archivo": "Distressing.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Fortune's Fool",
+    "nombre_es": "Maleficio: El Bufón de la Fortuna",
+    "personaje": "All",
+    "archivo": "HexFortunesFool.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: No One Escapes Death",
+    "nombre_es": "Maleficio: Nadie Escapa De la Muerte",
+    "personaje": "All",
+    "archivo": "HexNoOneEscapesDeath.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Thrill of the Hunt",
+    "nombre_es": "Maleficio: La Emoción De La Caza",
+    "personaje": "All",
+    "archivo": "HexThrilloftheHunt.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Insidious",
+    "nombre_es": "Insidia",
+    "personaje": "All",
+    "archivo": "Insidious.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Iron Grasp",
+    "nombre_es": "Apretón De Hierro",
+    "personaje": "All",
+    "archivo": "IronGrasp.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Keep Them Waiting",
+    "nombre_es": "Que Sigan Esperando",
+    "personaje": "All",
+    "archivo": "KeepThemWaiting.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "No Holds Barred",
+    "nombre_es": "Sin Restricciones",
+    "personaje": "All",
+    "archivo": "NoHoldsBarred.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Scourge Hook: Monstrous Shrine",
+    "nombre_es": "Gancho Torturador: Santuario Monstruoso",
+    "personaje": "All",
+    "archivo": "ScourgeHookMonstrousShrine.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Scourge Hook: Weeping Wounds",
+    "nombre_es": "Gancho Torturador: Heridas Supurantes",
+    "personaje": "All",
+    "archivo": "ScourgeHookWeepingWounds.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "See How They Run",
+    "nombre_es": "Mira Cómo Corren",
+    "personaje": "All",
+    "archivo": "SeeHowTheyRun.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Shattered Hope",
+    "nombre_es": "Esperanza Rota",
+    "personaje": "All",
+    "archivo": "ShatteredHope.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Sloppy Butcher",
+    "nombre_es": "Carnicero Chapucero",
+    "personaje": "All",
+    "archivo": "SloppyButcher.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Spies from the Shadows",
+    "nombre_es": "Espías De Las Sombras",
+    "personaje": "All",
+    "archivo": "SpiesfromtheShadows.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Unrelenting",
+    "nombre_es": "Implacable",
+    "personaje": "All",
+    "archivo": "Unrelenting.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Whispers",
+    "nombre_es": "Murmullos",
+    "personaje": "All",
+    "archivo": "Whispers.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Agitation",
+    "nombre_es": "Agitación",
+    "personaje": "Evan MacMillan - The Trapper",
+    "archivo": "Agitation.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Brutal Strength",
+    "nombre_es": "Fuerza Brutal",
+    "personaje": "Evan MacMillan - The Trapper",
+    "archivo": "BrutalStrength.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Unnerving Presence",
+    "nombre_es": "Presencia Perturbadora",
+    "personaje": "Evan MacMillan - The Trapper",
+    "archivo": "UnnervingPresence.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Bloodhound",
+    "nombre_es": "Sabueso De Sangre",
+    "personaje": "Philip Ojomo - The Wraith",
+    "archivo": "Bloodhound.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Predator",
+    "nombre_es": "Depredación",
+    "personaje": "Philip Ojomo - The Wraith",
+    "archivo": "Predator.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Shadowborn",
+    "nombre_es": "Hijo De Las Sombras",
+    "personaje": "Philip Ojomo - The Wraith",
+    "archivo": "Shadowborn.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Enduring",
+    "nombre_es": "Resistente",
+    "personaje": "Max Thompson Jr. - The Hillbilly",
+    "archivo": "Enduring.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Lightborn",
+    "nombre_es": "Hijo De La Luz",
+    "personaje": "Max Thompson Jr. - The Hillbilly",
+    "archivo": "Lightborn.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Tinkerer",
+    "nombre_es": "Reparador",
+    "personaje": "Max Thompson Jr. - The Hillbilly",
+    "archivo": "Tinkerer.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "A Nurse's Calling",
+    "nombre_es": "Vocación De Enfermera",
+    "personaje": "Sally Smithson - The Nurse",
+    "archivo": "ANursesCalling.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Stridor",
+    "nombre_es": "Aliento",
+    "personaje": "Sally Smithson - The Nurse",
+    "archivo": "Stridor.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Thanatophobia",
+    "nombre_es": "Tanatofobia",
+    "personaje": "Sally Smithson - The Nurse",
+    "archivo": "Thanatophobia.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Dying Light",
+    "nombre_es": "Luz que Agoniza",
+    "personaje": "Michael Myers - The Shape",
+    "archivo": "DyingLight.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Play with Your Food",
+    "nombre_es": "Jugar con la Comida",
+    "personaje": "Michael Myers - The Shape",
+    "archivo": "PlaywithYourFood.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Save the Best for Last",
+    "nombre_es": "Lo Mejor para el Final",
+    "personaje": "Michael Myers - The Shape",
+    "archivo": "SavetheBestforLast.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Devour Hope",
+    "nombre_es": "Maleficio: Devoradora De Esperanza",
+    "personaje": "Lisa Sherwood - The Hag",
+    "archivo": "HexDevourHope.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Ruin",
+    "nombre_es": "Maleficio: Ruina",
+    "personaje": "Lisa Sherwood - The Hag",
+    "archivo": "HexRuin.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: The Third Seal",
+    "nombre_es": "Maleficio: El Tercer Sello",
+    "personaje": "Lisa Sherwood - The Hag",
+    "archivo": "HexTheThirdSeal.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Monitor & Abuse",
+    "nombre_es": "Monitorización Y Abuso",
+    "personaje": "Herman Carter - The Doctor",
+    "archivo": "MonitorAbuse.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Overcharge",
+    "nombre_es": "Sobrecarga",
+    "personaje": "Herman Carter - The Doctor",
+    "archivo": "Overcharge.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Overwhelming Presence",
+    "nombre_es": "Presencia Abrumadora",
+    "personaje": "Herman Carter - The Doctor",
+    "archivo": "OverwhelmingPresence.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Beast of Prey",
+    "nombre_es": "Bestia De Presa",
+    "personaje": "Anna - The Huntress",
+    "archivo": "BeastofPrey.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Huntress Lullaby",
+    "nombre_es": "Maleficio: Arrullo De Cazadora",
+    "personaje": "Anna - The Huntress",
+    "archivo": "HexHuntressLullaby.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Territorial Imperative",
+    "nombre_es": "Instinto Territorial",
+    "personaje": "Anna - The Huntress",
+    "archivo": "TerritorialImperative.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Barbecue & Chilli",
+    "nombre_es": "Parrillada Y Chile",
+    "personaje": "Bubba Sawyer - The Cannibal",
+    "archivo": "BarbecueChilli.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Franklin's Demise",
+    "nombre_es": "Muerte De Franklin",
+    "personaje": "Bubba Sawyer - The Cannibal",
+    "archivo": "FranklinsDemise.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Knock Out",
+    "nombre_es": "Noqueo",
+    "personaje": "Bubba Sawyer - The Cannibal",
+    "archivo": "KnockOut.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Blood Warden",
+    "nombre_es": "Guardián De Sangre",
+    "personaje": "Freddy Krueger - The Nightmare",
+    "archivo": "BloodWarden.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Fire Up",
+    "nombre_es": "Enfurecimiento",
+    "personaje": "Freddy Krueger - The Nightmare",
+    "archivo": "FireUp.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Remember Me",
+    "nombre_es": "Recuérdame",
+    "personaje": "Freddy Krueger - The Nightmare",
+    "archivo": "RememberMe.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Make Your Choice",
+    "nombre_es": "Toma Una Decisión",
+    "personaje": "Amanda Young - The Pig",
+    "archivo": "MakeYourChoice.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Scourge Hook: Hangman's Trick",
+    "nombre_es": "Gancho Torturador: Truco Del Verdugo",
+    "personaje": "Amanda Young - The Pig",
+    "archivo": "ScourgeHookHangmansTrick.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Surveillance",
+    "nombre_es": "Supervisión",
+    "personaje": "Amanda Young - The Pig",
+    "archivo": "Surveillance.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Bamboozle",
+    "nombre_es": "Desconcierto",
+    "personaje": "Kenneth Chase alias Jeffrey Hawk — The Clown",
+    "archivo": "Bamboozle.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Coulrophobia",
+    "nombre_es": "Coulrofobia",
+    "personaje": "Kenneth Chase alias Jeffrey Hawk — The Clown",
+    "archivo": "Coulrophobia.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Pop Goes the Weasel",
+    "nombre_es": "Pim, Pam, Pum",
+    "personaje": "Kenneth Chase alias Jeffrey Hawk — The Clown",
+    "archivo": "PopGoestheWeasel.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Haunted Ground",
+    "nombre_es": "Maleficio: Tierra Embrujada",
+    "personaje": "Rin Yamaoka - The Spirit",
+    "archivo": "HexHauntedGround.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Rancor",
+    "nombre_es": "Rencor",
+    "personaje": "Rin Yamaoka - The Spirit",
+    "archivo": "Rancor.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Spirit Fury",
+    "nombre_es": "Furia Espiritual",
+    "personaje": "Rin Yamaoka - The Spirit",
+    "archivo": "SpiritFury.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Discordance",
+    "nombre_es": "Discordancia",
+    "personaje": "Frank, Julie, Susie, Joey - The Legion",
+    "archivo": "Discordance.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Iron Maiden",
+    "nombre_es": "Doncella De Hierro",
+    "personaje": "Frank, Julie, Susie, Joey - The Legion",
+    "archivo": "IronMaiden.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Mad Grit",
+    "nombre_es": "Furia Ciega",
+    "personaje": "Frank, Julie, Susie, Joey - The Legion",
+    "archivo": "MadGrit.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Corrupt Intervention",
+    "nombre_es": "Intervención Corrupta",
+    "personaje": "Adiris - The Plague",
+    "archivo": "CorruptIntervention.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Dark Devotion",
+    "nombre_es": "Devoción Oscura",
+    "personaje": "Adiris - The Plague",
+    "archivo": "DarkDevotion.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Infectious Fright",
+    "nombre_es": "Terror Contagioso",
+    "personaje": "Adiris - The Plague",
+    "archivo": "InfectiousFright.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Furtive Chase",
+    "nombre_es": "Persecución Furtiva",
+    "personaje": "Danny Johnson - The Ghost Face",
+    "archivo": "FurtiveChase.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "I'm All Ears",
+    "nombre_es": "Soy Todo Oídos",
+    "personaje": "Danny Johnson - The Ghost Face",
+    "archivo": "ImAllEars.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Thrilling Tremors",
+    "nombre_es": "Temblores Trepidantes",
+    "personaje": "Danny Johnson - The Ghost Face",
+    "archivo": "ThrillingTremors.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Cruel Limits",
+    "nombre_es": "Restricción Cruel",
+    "personaje": "The Demogorgon",
+    "archivo": "CruelLimits.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Mindbreaker",
+    "nombre_es": "Quebrantamentes",
+    "personaje": "The Demogorgon",
+    "archivo": "Mindbreaker.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Surge",
+    "nombre_es": "Sobrecarga",
+    "personaje": "The Demogorgon",
+    "archivo": "Surge.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Blood Echo",
+    "nombre_es": "Eco De Sangre",
+    "personaje": "Kazan Yamaoka - The Oni",
+    "archivo": "BloodEcho.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Nemesis",
+    "nombre_es": "Némesis",
+    "personaje": "Kazan Yamaoka - The Oni",
+    "archivo": "Nemesis.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Zanshin Tactics",
+    "nombre_es": "Tacticas Zanshin",
+    "personaje": "Kazan Yamaoka - The Oni",
+    "archivo": "ZanshinTactics.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Dead Man's Switch",
+    "nombre_es": "Interruptor De Hombre Muerto",
+    "personaje": "Caleb Quinn - The Deathslinger",
+    "archivo": "DeadMansSwitch.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Gearhead",
+    "nombre_es": "Cabeza Dentada",
+    "personaje": "Caleb Quinn - The Deathslinger",
+    "archivo": "Gearhead.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Retribution",
+    "nombre_es": "Maleficio: Retribución",
+    "personaje": "Caleb Quinn - The Deathslinger",
+    "archivo": "HexRetribution.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Deathbound",
+    "nombre_es": "Atadura Mortal",
+    "personaje": "Pyramid Head - The Executioner",
+    "archivo": "Deathbound.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Forced Penance",
+    "nombre_es": "Penitencia Forzada",
+    "personaje": "Pyramid Head - The Executioner",
+    "archivo": "ForcedPenance.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Trail of Torment",
+    "nombre_es": "Senda Del Tormento",
+    "personaje": "Pyramid Head - The Executioner",
+    "archivo": "TrailofTorment.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Dragon's Grip",
+    "nombre_es": "Garra De Dragón",
+    "personaje": "Talbot Grimes - The Blight",
+    "archivo": "DragonsGrip.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Blood Favour",
+    "nombre_es": "Maleficio: Favor De Sangre",
+    "personaje": "Talbot Grimes - The Blight",
+    "archivo": "HexBloodFavour.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Undying",
+    "nombre_es": "Maleficio: Inmortal",
+    "personaje": "Talbot Grimes - The Blight",
+    "archivo": "HexUndying.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Coup de Grâce",
+    "nombre_es": "Golpe De Gracia",
+    "personaje": "Charlotte & Victor Deshayes - The Twins",
+    "archivo": "CoupdeGrace.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hoarder",
+    "nombre_es": "Acumulador",
+    "personaje": "Charlotte & Victor Deshayes - The Twins",
+    "archivo": "Hoarder.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Oppression",
+    "nombre_es": "Opresión",
+    "personaje": "Charlotte & Victor Deshayes - The Twins",
+    "archivo": "Oppression.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Crowd Control",
+    "nombre_es": "Maleficio: Control Del Público",
+    "personaje": "Hak Ji-woon - The Trickster",
+    "archivo": "HexCrowdControl.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "No Way Out",
+    "nombre_es": "Sin Salida",
+    "personaje": "Hak Ji-woon - The Trickster",
+    "archivo": "NoWayOut.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Starstruck",
+    "nombre_es": "Deslumbrante",
+    "personaje": "Hak Ji-woon - The Trickster",
+    "archivo": "Starstruck.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Eruption",
+    "nombre_es": "Erupción",
+    "personaje": "Nemesis T-Type - The Nemesis",
+    "archivo": "Eruption.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hysteria",
+    "nombre_es": "Histeria",
+    "personaje": "Nemesis T-Type - The Nemesis",
+    "archivo": "Hysteria.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Lethal Pursuer",
+    "nombre_es": "Perseguidor Letal",
+    "personaje": "Nemesis T-Type - The Nemesis",
+    "archivo": "LethalPursuer.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Deadlock",
+    "nombre_es": "Callejón sin Salida",
+    "personaje": "Elliot Spencer alias Pinhead - The Cenobite",
+    "archivo": "Deadlock.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Plaything",
+    "nombre_es": "Maleficio: Tiempo de Jugar",
+    "personaje": "Elliot Spencer alias Pinhead - The Cenobite",
+    "archivo": "HexPlaything.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Scourge Hook: Gift of Pain",
+    "nombre_es": "Gancho Torturador: Obsequio de Dolor",
+    "personaje": "Elliot Spencer alias Pinhead - The Cenobite",
+    "archivo": "ScourgeHookGiftofPain.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Grim Embrace",
+    "nombre_es": "Abrazo De La Muerte",
+    "personaje": "Carmina Mora - The Artist",
+    "archivo": "GrimEmbrace.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Pentimento",
+    "nombre_es": "Maleficio: Arrepentimiento",
+    "personaje": "Carmina Mora - The Artist",
+    "archivo": "HexPentimento.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Scourge Hook: Pain Resonance",
+    "nombre_es": "Gancho Torturador: Dolor Resonante",
+    "personaje": "Carmina Mora - The Artist",
+    "archivo": "ScourgeHookPainResonance.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Call of Brine",
+    "nombre_es": "Anuncio De Salmuera",
+    "personaje": "Sadako Yamamura - The Onryō",
+    "archivo": "CallofBrine.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Merciless Storm",
+    "nombre_es": "Tormenta Despiadada",
+    "personaje": "Sadako Yamamura - The Onryō",
+    "archivo": "MercilessStorm.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Scourge Hook: Floods of Rage",
+    "nombre_es": "Gancho Torturador: Torrente De Ira",
+    "personaje": "Sadako Yamamura - The Onryō",
+    "archivo": "ScourgeHookFloodsofRage.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Darkness Revealed",
+    "nombre_es": "Oscuridad Revelada",
+    "personaje": "The Dredge",
+    "archivo": "DarknessRevealed.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Dissolution",
+    "nombre_es": "Disolución",
+    "personaje": "The Dredge",
+    "archivo": "Dissolution.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Septic Touch",
+    "nombre_es": "Contacto Séptico",
+    "personaje": "The Dredge",
+    "archivo": "SepticTouch.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Awakened Awareness",
+    "nombre_es": "Conciencia De Estar Despiertos",
+    "personaje": "Albert Wesker - The Mastermind",
+    "archivo": "AwakenedAwareness.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Superior Anatomy",
+    "nombre_es": "Anatomía Superior",
+    "personaje": "Albert Wesker - The Mastermind",
+    "archivo": "SuperiorAnatomy.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Terminus",
+    "nombre_es": "Terminal",
+    "personaje": "Albert Wesker - The Mastermind",
+    "archivo": "Terminus.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Face the Darkness",
+    "nombre_es": "Maleficio: Enfrentar A La Oscuridad",
+    "personaje": "Tarhos Kovács - The Knight",
+    "archivo": "HexFacetheDarkness.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hubris",
+    "nombre_es": "Soberbia",
+    "personaje": "Tarhos Kovács - The Knight",
+    "archivo": "Hubris.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Nowhere to Hide",
+    "nombre_es": "No Hay Dónde Esconderse",
+    "personaje": "Tarhos Kovács - The Knight",
+    "archivo": "NowheretoHide.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Game Afoot",
+    "nombre_es": "Hora De La Cacería",
+    "personaje": "Adriana Imai - The Skull Merchant",
+    "archivo": "GameAfoot.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Leverage",
+    "nombre_es": "Influencia",
+    "personaje": "Adriana Imai - The Skull Merchant",
+    "archivo": "Leverage.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "THWACK!",
+    "nombre_es": "¡PLAF!",
+    "personaje": "Adriana Imai - The Skull Merchant",
+    "archivo": "THWACK.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Forced Hesitation",
+    "nombre_es": "Duda Forzada",
+    "personaje": "HUX-A7-13 - The Singularity",
+    "archivo": "ForcedHesitation.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Genetic Limits",
+    "nombre_es": "Límites Genéticos",
+    "personaje": "HUX-A7-13 - The Singularity",
+    "archivo": "GeneticLimits.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Machine Learning",
+    "nombre_es": "Aprendizaje Automatizado",
+    "personaje": "HUX-A7-13 - The Singularity",
+    "archivo": "MachineLearning.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Alien Instinct",
+    "nombre_es": "Instinto Alienígena",
+    "personaje": "Xenomorph XX121 - The Xenomorph",
+    "archivo": "AlienInstinct.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Rapid Brutality",
+    "nombre_es": "Brutalidad Veloz",
+    "personaje": "Xenomorph XX121 - The Xenomorph",
+    "archivo": "RapidBrutality.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Ultimate Weapon",
+    "nombre_es": "Arma Definitiva",
+    "personaje": "Xenomorph XX121 - The Xenomorph",
+    "archivo": "UltimateWeapon.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Batteries Included",
+    "nombre_es": "Baterías Incluidas",
+    "personaje": "Charles Lee Ray - The Good Guy",
+    "archivo": "BatteriesIncluded.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Friends 'til the End",
+    "nombre_es": "Amigos Hasta El Fin",
+    "personaje": "Charles Lee Ray - The Good Guy",
+    "archivo": "FriendstiltheEnd.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Two Can Play",
+    "nombre_es": "Maleficio: Yo También Puedo Jugar",
+    "personaje": "Charles Lee Ray - The Good Guy",
+    "archivo": "HexTwoCanPlay.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Unbound",
+    "nombre_es": "Desatado",
+    "personaje": "The Unknown",
+    "archivo": "Unbound.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Undone",
+    "nombre_es": "Inacabado",
+    "personaje": "The Unknown",
+    "archivo": "Undone.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Unforeseen",
+    "nombre_es": "Imprevisto",
+    "personaje": "The Unknown",
+    "archivo": "Unforeseen.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Dark Arrogance",
+    "nombre_es": "Arrogancia Oscura",
+    "personaje": "Vecna - The Lich",
+    "archivo": "DarkArrogance.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Languid Touch",
+    "nombre_es": "Toque Lánguido",
+    "personaje": "Vecna - The Lich",
+    "archivo": "LanguidTouch.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Weave Attunement",
+    "nombre_es": "Armonización De Tejido",
+    "personaje": "Vecna - The Lich",
+    "archivo": "WeaveAttunement.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Dominance",
+    "nombre_es": "Dominación",
+    "personaje": "Vlad Tepes Dracula - The Dark Lord",
+    "archivo": "Dominance.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Wretched Fate",
+    "nombre_es": "Maleficio: Destino Miserable",
+    "personaje": "Vlad Tepes Dracula - The Dark Lord",
+    "archivo": "HexWretchedFate.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Human Greed",
+    "nombre_es": "Codicia Humana",
+    "personaje": "Vlad Tepes Dracula - The Dark Lord",
+    "archivo": "HumanGreed.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "All-Shaking Thunder",
+    "nombre_es": "Trueno Sísmico",
+    "personaje": "Portia Maye - The Houndmaster",
+    "archivo": "AllShakingThunder.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "No Quarter",
+    "nombre_es": "Sin Piedad",
+    "personaje": "Portia Maye - The Houndmaster",
+    "archivo": "NoQuarter.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Scourge Hook: Jagged Compass",
+    "nombre_es": "Gancho Torturador: Brújula Irregular",
+    "personaje": "Portia Maye - The Houndmaster",
+    "archivo": "ScourgeHookJaggedCompass.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Forever Entwined",
+    "nombre_es": "Unidos Por Siempre",
+    "personaje": "Ken Kaneki - The Ghoul",
+    "archivo": "ForeverEntwined.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Nothing but Misery",
+    "nombre_es": "Maleficio: Pura Miseria",
+    "personaje": "Ken Kaneki - The Ghoul",
+    "archivo": "HexNothingbutMisery.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "None Are Free",
+    "nombre_es": "Nadie Es Libre",
+    "personaje": "Ken Kaneki - The Ghoul",
+    "archivo": "NoneAreFree.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Haywire",
+    "nombre_es": "Caos",
+    "personaje": "William Afton - The Animatronic",
+    "archivo": "Haywire.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Help Wanted",
+    "nombre_es": "Pedido De Ayuda",
+    "personaje": "William Afton - The Animatronic",
+    "archivo": "HelpWanted.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Phantom Fear",
+    "nombre_es": "Miedo Fantasmal",
+    "personaje": "William Afton - The Animatronic",
+    "archivo": "PhantomFear.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Overture of Doom",
+    "nombre_es": "Maleficio: Obertura De La Perdición",
+    "personaje": "Burong Sukapat - The Krasue",
+    "archivo": "HexOvertureofDoom.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Ravenous",
+    "nombre_es": "Voracidad",
+    "personaje": "Burong Sukapat - The Krasue",
+    "archivo": "Ravenous.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Wandering Eye",
+    "nombre_es": "Ojo Errante",
+    "personaje": "Burong Sukapat - The Krasue",
+    "archivo": "WanderingEye.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Hive Mind",
+    "nombre_es": "Maleficio: Mente Colmena",
+    "personaje": "Henry Creel - The First",
+    "archivo": "HexHiveMind.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Secret Project",
+    "nombre_es": "Proyecto Secreto",
+    "personaje": "Henry Creel - The First",
+    "archivo": "SecretProject.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Turn Back the Clock",
+    "nombre_es": "Retrocede El Tiempo",
+    "personaje": "Henry Creel - The First",
+    "archivo": "TurnBacktheClock.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Scared to Death",
+    "nombre_es": "Maleficio: Terror Hasta la Muerte",
+    "personaje": "Jason Voorhees - The Slasher",
+    "archivo": "ScaredToDeath.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Rampage",
+    "nombre_es": "Matanza",
+    "personaje": "Jason Voorhees - The Slasher",
+    "archivo": "Rampage.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Silent Shadow",
+    "nombre_es": "Sombra Silenciosa",
+    "personaje": "Jason Voorhees - The Slasher",
+    "archivo": "SilentShadow.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Celestial Witness",
+    "nombre_es": "Testigo Celestial",
+    "personaje": "The Judgment",
+    "archivo": "CelestialWitness.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Hex: Under Your Thumb",
+    "nombre_es": "Maleficio: Bajo el Yujo",
+    "personaje": "The Judgment",
+    "archivo": "HexUnderYourThumb.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "nombre": "Lay Waste",
+    "nombre_es": "Devastación",
+    "personaje": "The Judgment",
+    "archivo": "LayWaste.webp",
+    "audios": [
+      "dbd_check_start.mp3"
+    ]
+  },
+  {
+    "sinPerk": true,
+    "nombre": "Sin Perk",
+    "nombre_es": "Sin Perk",
+    "personaje": "",
+    "archivo": "logodbd.webp",
+    "audios": []
+  }
+]
