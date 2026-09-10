@@ -49,25 +49,32 @@ function normalizarCategoria(categoria) {
 function cambiarIdiomaSistema(nuevoIdioma) {
     const idioma = normalizarIdioma(nuevoIdioma);
     if (!idioma) {
-        console.warn("Idioma WS no reconocido:", nuevoIdioma);
+        console.warn("Idioma no reconocido:", nuevoIdioma);
         return;
     }
 
     state.idiomaActual = idioma;
-    remoteLog(mensajesChat.idioma[state.idiomaActual]);
     actualizarIdiomaSlots();
+	
+	return true;
 }
 
 function toggleIdioma() {
- const nuevoIdioma = state.idiomaActual === "eng" ? "esp" : "eng";
- cambiarIdiomaSistema(nuevoIdioma);
- 
- // DETALLE 2: Actualizar el texto del botón en la UI para mantener sincronía
- const btn = document.getElementById("btn-idioma");
- if (btn) {
- btn.textContent = nuevoIdioma === "esp" ? "!lan esp" : "!lan eng";
- }
+    const nuevoIdioma = state.idiomaActual === "eng" ? "esp" : "eng";
+
+    if (!cambiarIdiomaSistema(nuevoIdioma)) return;
+
+    const btn = document.getElementById("btn-idioma");
+
+    if (btn) {
+        btn.textContent = state.idiomaActual === "esp"
+            ? "!lan eng"
+            : "!lan esp";
+    }
+
+    remoteLog(mensajesChat.idioma[state.idiomaActual]);
 }
+
 
 function ejecutarRerollSeleccionado() {
     if (state.indiceSlotActual < 4) {
@@ -191,3 +198,4 @@ async function iniciarAplicacion() {
 }
 
 iniciarAplicacion();
+
