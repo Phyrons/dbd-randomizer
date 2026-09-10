@@ -1,5 +1,5 @@
 import { state } from "./state.js";
-import { ITEM_WIDTH, MAX_RULETA, SIN_PERK, TOTAL_SLOTS } from "./config.js";
+import { ITEM_WIDTH, MAX_RULETA, TOTAL_SLOTS } from "./config.js";
 import { mezclar } from "./utils.js";
 import { reproducirClick, reproducirInicio, reproducirVictoria } from "./audio.js";
 import { limpiarSlots } from "./ui.js";
@@ -7,7 +7,8 @@ import { limpiarSlots } from "./ui.js";
 const pista = document.getElementById("pista-personajes");
 
 export function procesarGiroRuleta(categoria, baneosSolicitadosWs = 0, remoteLog = () => {}) {
-    if (!state.listasGlobales[categoria]) return;
+    const datosCategoria = state.listasGlobales[categoria];
+    if (!datosCategoria) return;
 
     state.categoriaActual = categoria;
     remoteLog(`¡${state.idiomaActual === "esp" ? "Comenzando giro para categoría: " : "Starting roll for category: "}${categoria}!`);
@@ -15,7 +16,9 @@ export function procesarGiroRuleta(categoria, baneosSolicitadosWs = 0, remoteLog
     let baneosSolicitados = parseInt(baneosSolicitadosWs, 10);
     if (Number.isNaN(baneosSolicitados)) baneosSolicitados = 0;
 
-    let listaCompleta = [...state.listasGlobales[categoria]];
+    state.sinPerk = datosCategoria.find(perk => perk.sinPerk) || null;
+
+    let listaCompleta = datosCategoria.filter(perk => !perk.sinPerk);
 
     const baneados = state.excluidosPorCategoria[categoria] || [];
     if (baneados.length > 0) {
@@ -85,7 +88,10 @@ function construirPista(listaBase) {
     pista.innerHTML = "";
 
     const sinPerkActivo = state.sinPerkHabilitadoPorCategoria[state.categoriaActual];
-    const base = sinPerkActivo ? [...listaBase, SIN_PERK] : [...listaBase];
+    const base = sinPerkActivo && state.sinPerk
+        ? [...listaBase, state.sinPerk]
+        : [...listaBase];
+
     const listaExtendida = [];
 
     for (let i = 0; i < 10; i++) {
@@ -124,14 +130,15 @@ function girar(forcedIndex = null) {
     const tiempoGiroMs = Math.floor(Math.random() * (8000 - 5000 + 1)) + 5000;
 
     const sinPerkActivo = state.sinPerkHabilitadoPorCategoria[state.categoriaActual];
-    const saleSinPerk = sinPerkActivo && Math.random() < 0.25;
+    const saleSinPerk = sinPerkActivo && Boolean(state.sinPerk);
+    const debeSerSinPerk = saleSinPerk && Math.random() < 0.25;
     const cantidadNormales = state.listaDisponible.length;
-    const cantidadBase = cantidadNormales + (sinPerkActivo ? 1 : 0);
+    const cantidadBase = cantidadNormales + (saleSinPerk ? 1 : 0);
 
-    if (cantidadBase <= 0) return;
+    if (cantidadNormales <= 0) return;
 
     const inicioObjetivo = totalItems - cantidadBase * 2;
-    const indiceBase = saleSinPerk
+    const indiceBase = debeSerSinPerk
         ? cantidadNormales
         : Math.floor(Math.random() * cantidadNormales);
     const indiceGanadorReal = inicioObjetivo + indiceBase;
@@ -165,7 +172,7 @@ function girar(forcedIndex = null) {
         clearInterval(intervalClick);
 
         const maxRetroceso = Math.min(2, indiceBase);
-        const debeRetroceder = Math.random() <= 0.5 && !saleSinPerk && maxRetroceso > 0;
+        const debeRetroceder = Math.random() <= 0.5 && !debeSerSinPerk && maxRetroceso > 0;
 
         if (debeRetroceder) {
             setTimeout(() => {
