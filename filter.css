@@ -1,0 +1,109 @@
+/* --- FILTROS JERÁRQUICOS --- */
+.grid-personajes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.filtro-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+    font-family: 'Anta', sans-serif;
+    color: white;
+}
+
+.filtro-checkbox input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--ow-blue);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.filtro-grupo {
+    border: 1px solid rgba(0, 210, 255, 0.25);
+    background: rgba(0, 0, 0, 0.35);
+    margin-bottom: 8px;
+}
+
+.filtro-grupo summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    background: rgba(0, 210, 255, 0.06);
+}
+
+.filtro-grupo summary::-webkit-details-marker {
+    display: none;
+}
+
+.filtro-grupo summary::before {
+    content: '▸';
+    display: inline-block;
+    width: 20px;
+    color: var(--ow-blue);
+    transition: transform 0.2s ease;
+}
+
+.filtro-grupo[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+.filtro-grupo-checkbox {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.filtro-grupo-contenido {
+    padding: 8px 12px 12px 32px;
+}
+
+.filtro-grupo.nivel-1 {
+    border-color: rgba(255, 202, 40, 0.25);
+    margin-top: 8px;
+}
+
+.filtro-grupo.nivel-1 summary {
+    background: rgba(255, 202, 40, 0.06);
+}
+
+.filtro-grupo.nivel-1 summary::before {
+    color: var(--ow-gold);
+}
+
+.filtro-personaje {
+    padding: 6px 4px;
+    font-size: 19px;
+}
+
+.filtro-personaje:hover,
+.filtro-grupo summary:hover {
+    background: rgba(0, 210, 255, 0.08);
+}
+
+.filtro-sin-perk {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.filtro-sin-perk.sin-perk-activo {
+    border-color: var(--ow-green);
+    color: var(--ow-green);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.35);
+}
+
+.filtro-separador {
+    width: 100%;
+    padding: 8px 0;
+    margin-bottom: 8px;
+    color: var(--ow-blue);
+    border-bottom: 1px solid rgba(0, 210, 255, 0.35);
+    font-family: 'Quantico', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
