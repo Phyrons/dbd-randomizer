@@ -50,14 +50,13 @@ export function seleccionarSlotReroll(numero) {
 export function prepararControlesUI({ onRollSurvivor, onRollKiller, onReroll, onFilters, onIdioma }) {
     document.getElementById("btn-surv")?.addEventListener("click", () => cambiarCategoria("perksurv"));
     document.getElementById("btn-killer")?.addEventListener("click", () => cambiarCategoria("perkkiller"));
-    document.querySelector(".comando-box.azul")?.addEventListener("click", onFilters);
-    document.querySelector(".comando-box.dorado")?.addEventListener("click", onIdioma);
-    document.querySelectorAll("#num-1, #num-2, #num-3, #num-4").forEach((button, index) => {
-        button.addEventListener("click", () => seleccionarSlotReroll(index + 1));
-    });
+    document.getElementById("btn-filtros")?.addEventListener("click", onFilters);
+    document.getElementById("btn-idioma")?.addEventListener("click", onIdioma);
+    document.getElementById("btn-roll-surv")?.addEventListener("click", onRollSurvivor);
+    document.getElementById("btn-reroll")?.addEventListener("click", onReroll);
+    document.getElementById("btn-roll-killer")?.addEventListener("click", onRollKiller);
 
-    const cajasBig = document.querySelectorAll(".fila:last-child .comando-box.big.blanco");
-    if (cajasBig[0]) cajasBig[0].addEventListener("click", onRollSurvivor);
-    if (cajasBig[1]) cajasBig[1].addEventListener("click", onReroll);
-    if (cajasBig[2]) cajasBig[2].addEventListener("click", onRollKiller);
+    for (let i = 1; i <= TOTAL_SLOTS; i++) {
+        document.getElementById(`num-${i}`)?.addEventListener("click", () => seleccionarSlotReroll(i));
+    }
 }
