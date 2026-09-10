@@ -39,10 +39,7 @@ jobs:
               items = list(data.get(key, []))
               if not any(item.get('sinPerk') for item in items):
                   items.append(sin_perk.copy())
-              (out / filename).write_text(
-                  json.dumps(items, ensure_ascii=False, indent=2) + '\n',
-                  encoding='utf-8'
-              )
+              (out / filename).write_text(json.dumps(items, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
           survivor_chars = sorted({p.get('personaje') for p in data.get('perksurv', []) if p.get('personaje') and p.get('personaje') != 'All'})
           killer_chars = sorted({p.get('personaje') for p in data.get('perkkiller', []) if p.get('personaje') and p.get('personaje') != 'All'})
@@ -83,9 +80,8 @@ jobs:
 
           def make_groups(chars, licenses):
               assigned = {p for _, _, people in licenses for p in people}
-              originals = sorted(set(chars) - assigned)
               return [
-                  {'id': 'originales', 'nombre': 'Originales', 'tipo': 'grupo', 'personajes': originals},
+                  {'id': 'originales', 'nombre': 'Originales', 'tipo': 'grupo', 'personajes': sorted(set(chars) - assigned)},
                   {'id': 'licencias', 'nombre': 'Licencias', 'tipo': 'grupo', 'subgrupos': [
                       {'id': i, 'nombre': n, 'tipo': 'franquicia', 'personajes': p}
                       for i, n, p in licenses if p
@@ -97,10 +93,7 @@ jobs:
               'survivors': {'grupos': make_groups(survivor_chars, survivor_licenses)},
               'killers': {'grupos': make_groups(killer_chars, killer_licenses)},
           }
-          (out / 'grupos.json').write_text(
-              json.dumps(groups, ensure_ascii=False, indent=2) + '\n',
-              encoding='utf-8'
-          )
+          (out / 'grupos.json').write_text(json.dumps(groups, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
           PY
 
       - name: Commit generated JSON files
