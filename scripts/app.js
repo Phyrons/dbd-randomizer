@@ -29,8 +29,6 @@ function remoteLog(message) {
 function normalizarIdioma(idioma) {
     const valor = String(idioma ?? "").trim().toLowerCase();
 
-    // Streamer.bot puede recibir/enviar "ing", mientras que la aplicación
-    // utiliza "eng" internamente.
     if (valor === "eng" || valor === "ing" || valor === "en" || valor === "english") return "eng";
     if (valor === "esp" || valor === "es" || valor === "spanish") return "esp";
 
@@ -50,13 +48,20 @@ function cambiarIdiomaSistema(nuevoIdioma) {
     const idioma = normalizarIdioma(nuevoIdioma);
     if (!idioma) {
         console.warn("Idioma no reconocido:", nuevoIdioma);
-        return;
+        return false;
     }
 
     state.idiomaActual = idioma;
     actualizarIdiomaSlots();
-	
-	return true;
+
+    const btn = document.getElementById("btn-idioma");
+    if (btn) {
+        btn.textContent = state.idiomaActual === "esp"
+            ? "!lan eng"
+            : "!lan esp";
+    }
+
+    return true;
 }
 
 function toggleIdioma() {
@@ -64,17 +69,9 @@ function toggleIdioma() {
 
     if (!cambiarIdiomaSistema(nuevoIdioma)) return;
 
-    const btn = document.getElementById("btn-idioma");
-
-    if (btn) {
-        btn.textContent = state.idiomaActual === "esp"
-            ? "!lan eng"
-            : "!lan esp";
-    }
-
+    // La interacción desde la interfaz HTML sí debe anunciar el cambio en el chat.
     remoteLog(mensajesChat.idioma[state.idiomaActual]);
 }
-
 
 function ejecutarRerollSeleccionado() {
     if (state.indiceSlotActual < 4) {
@@ -110,20 +107,22 @@ function procesarMensajeWS(eventData) {
                 return;
             }
 
-            // Los comandos actuales de Streamer.bot envían únicamente:
-            // { evento: "GIRAR_RULETA", categoria: "perksurv/perkkiller" }
-            procesarGiroRuleta(categoria, 0, remoteLog);
+            // Streamer.bot ya envía la respuesta al chat.
+            // El WS solo ejecuta el giro para evitar un mensaje duplicado.
+            procesarGiroRuleta(categoria, 0, () => {});
             break;
         }
 
         case "REROLL": {
-            // Streamer.bot envía slot como número: 1, 2, 3 o 4.
-            procesarReroll(data.slot, remoteLog, mensajesChat);
+            // Streamer.bot ya envía la respuesta al chat.
+            // El WS solo ejecuta el reroll para evitar un mensaje duplicado.
+            procesarReroll(data.slot, () => {}, mensajesChat);
             break;
         }
 
         case "CAMBIAR_IDIOMA":
-            // Acepta eng/esp y también ing/esp por compatibilidad con Streamer.bot.
+            // El comando de Streamer.bot gestiona el mensaje de chat.
+            // Aquí solo sincronizamos el idioma de la interfaz.
             cambiarIdiomaSistema(data.idioma);
             break;
 
@@ -198,4 +197,3 @@ async function iniciarAplicacion() {
 }
 
 iniciarAplicacion();
-
