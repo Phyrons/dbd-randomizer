@@ -9,7 +9,11 @@ import {
     cambiarCategoria
 } from "./ui.js";
 
+const WS_URL = "ws://127.0.0.1:8090/";
+const WS_RECONNECT_MS = 3000;
+
 let ws = null;
+let wsReconnectTimer = null;
 
 function remoteLog(message) {
     if (!ws || ws.readyState !== WebSocket.OPEN) return;
@@ -22,10 +26,34 @@ function remoteLog(message) {
     ws.send(JSON.stringify(payload));
 }
 
-function cambiarIdiomaSistema(nuevoIdioma) {
-    if (nuevoIdioma !== "esp" && nuevoIdioma !== "eng") return;
+function normalizarIdioma(idioma) {
+    const valor = String(idioma ?? "").trim().toLowerCase();
 
-    state.idiomaActual = nuevoIdioma;
+    // Streamer.bot puede recibir/enviar "ing", mientras que la aplicación
+    // utiliza "eng" internamente.
+    if (valor === "ing" || valor === "en" || valor === "english") return "eng";
+    if (valor === "esp" || valor === "es" || valor === "spanish") return "esp";
+
+    return null;
+}
+
+function normalizarCategoria(categoria) {
+    const valor = String(categoria ?? "").trim().toLowerCase();
+
+    if (valor === "perksurv") return "perksurv";
+    if (valor === "perkkiller") return "perkkiller";
+
+    return null;
+}
+
+function cambiarIdiomaSistema(nuevoIdioma) {
+    const idioma = normalizarIdioma(nuevoIdioma);
+    if (!idioma) {
+        console.warn("Idioma WS no reconocido:", nuevoIdioma);
+        return;
+    }
+
+    state.idiomaActual = idioma;
     remoteLog(mensajesChat.idioma[state.idiomaActual]);
     actualizarIdiomaSlots();
 }
@@ -48,38 +76,87 @@ function ejecutarRerollSeleccionado() {
     );
 }
 
-function iniciarWebSocket() {
-    ws = new WebSocket("ws://127.0.0.1:8090/");
+function procesarMensajeWS(eventData) {
+    const data = typeof eventData === "string" ? JSON.parse(eventData) : eventData;
 
-    ws.onopen = () => console.log("Conectado al Servidor 8090");
+    if (!data || typeof data !== "object") {
+        console.warn("Mensaje WS inválido:", eventData);
+        return;
+    }
+
+    const evento = String(data.evento ?? "").trim().toUpperCase();
+
+    console.log("📨 WS recibido:", data);
+
+    switch (evento) {
+        case "GIRAR_RULETA": {
+            const categoria = normalizarCategoria(data.categoria);
+
+            if (!categoria) {
+                console.warn("GIRAR_RULETA sin categoría válida:", data.categoria);
+                return;
+            }
+
+            // Los comandos actuales de Streamer.bot envían únicamente:
+            // { evento: "GIRAR_RULETA", categoria: "perksurv/perkkiller" }
+            procesarGiroRuleta(categoria, 0, remoteLog);
+            break;
+        }
+
+        case "REROLL": {
+            // Streamer.bot envía slot como número: 1, 2, 3 o 4.
+            procesarReroll(data.slot, remoteLog, mensajesChat);
+            break;
+        }
+
+        case "CAMBIAR_IDIOMA":
+            // Acepta eng/esp y también ing/esp por compatibilidad con Streamer.bot.
+            cambiarIdiomaSistema(data.idioma);
+            break;
+
+        default:
+            console.log("Evento WS desconocido:", data.evento, data);
+            break;
+    }
+}
+
+function programarReconexiónWS() {
+    if (wsReconnectTimer !== null) return;
+
+    wsReconnectTimer = setTimeout(() => {
+        wsReconnectTimer = null;
+        iniciarWebSocket();
+    }, WS_RECONNECT_MS);
+}
+
+function iniciarWebSocket() {
+    if (ws && (ws.readyState === WebSocket.OPEN || ws.readyState === WebSocket.CONNECTING)) {
+        return;
+    }
+
+    console.log(`🔌 Conectando al WebSocket ${WS_URL}...`);
+    ws = new WebSocket(WS_URL);
+
+    ws.onopen = () => {
+        console.log(`✅ Conectado al Servidor WebSocket: ${WS_URL}`);
+    };
 
     ws.onmessage = event => {
         try {
-            const data = JSON.parse(event.data);
-
-            switch (data.evento) {
-                case "GIRAR_RULETA":
-                    procesarGiroRuleta(data.categoria, data.baneos, remoteLog);
-                    break;
-
-                case "REROLL":
-                    procesarReroll(data.slot, remoteLog, mensajesChat);
-                    break;
-
-                case "CAMBIAR_IDIOMA":
-                    cambiarIdiomaSistema(data.idioma);
-                    break;
-
-                default:
-                    console.log("Evento desconocido:", data.evento);
-            }
+            procesarMensajeWS(event.data);
         } catch (error) {
-            console.error("Error procesando mensaje WS:", error);
+            console.error("❌ Error procesando mensaje WS:", error, event.data);
         }
     };
 
-    ws.onerror = error => console.error("Error en WS:", error);
-    ws.onclose = () => console.log("WS Desconectado");
+    ws.onerror = error => {
+        console.error("❌ Error en WebSocket:", error);
+    };
+
+    ws.onclose = () => {
+        console.warn("⚠️ WebSocket desconectado. Reintentando...");
+        programarReconexiónWS();
+    };
 }
 
 function iniciarInterfaz() {
@@ -99,8 +176,8 @@ async function iniciarAplicacion() {
     try {
         await cargarListas();
         iniciarInterfaz();
-        iniciarWebSocket();
         cambiarCategoria("perksurv");
+        iniciarWebSocket();
         console.log("DBD Randomizer iniciado correctamente.");
     } catch (error) {
         console.error("No se pudo iniciar DBD Randomizer:", error);
