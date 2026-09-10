@@ -1,0 +1,113 @@
+name: Split DBD JSON data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'listas.json'
+      - '.github/workflows/split-dbd-json.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  split-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Split listas.json
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          source = Path('listas.json')
+          data = json.loads(source.read_text(encoding='utf-8'))
+          out = Path('json')
+          out.mkdir(exist_ok=True)
+
+          sin_perk = {
+              'sinPerk': True,
+              'nombre': 'Sin Perk',
+              'nombre_es': 'Sin Perk',
+              'personaje': '',
+              'archivo': 'logodbd.webp',
+              'audios': []
+          }
+
+          for key, filename in [('perksurv', 'survivors.json'), ('perkkiller', 'killers.json')]:
+              items = list(data.get(key, []))
+              if not any(item.get('sinPerk') for item in items):
+                  items.append(sin_perk.copy())
+              (out / filename).write_text(
+                  json.dumps(items, ensure_ascii=False, indent=2) + '\n',
+                  encoding='utf-8'
+              )
+
+          survivor_chars = sorted({p.get('personaje') for p in data.get('perksurv', []) if p.get('personaje') and p.get('personaje') != 'All'})
+          killer_chars = sorted({p.get('personaje') for p in data.get('perkkiller', []) if p.get('personaje') and p.get('personaje') != 'All'})
+
+          survivor_licenses = [
+              ('resident-evil', 'Resident Evil', ['Jill Valentine', 'Leon Scott Kennedy', 'Rebecca Chambers']),
+              ('stranger-things', 'Stranger Things', ['Nancy Wheeler', 'Steve Harrington', 'Dustin Henderson', 'Jane Hopper — Eleven']),
+              ('silent-hill', 'Silent Hill', ['Cheryl Mason']),
+              ('halloween', 'Halloween', ['Laurie Strode']),
+              ('evil-dead', 'Evil Dead', ['Ash Williams']),
+              ('alan-wake', 'Alan Wake', ['Alan Wake']),
+              ('alien', 'Alien', ['Ellen Ripley']),
+              ('dungeons-dragons', 'Dungeons & Dragons', ['Aestri Yazar & Baermar Uraz']),
+              ('tomb-raider', 'Tomb Raider', ['Lara Croft']),
+              ('castlevania', 'Castlevania', ['Trevor Belmont']),
+              ('the-walking-dead', 'The Walking Dead', ['Rick Grimes', 'Michonne Grimes']),
+              ('nicolas-cage', 'Nicolas Cage', ['Nicolas Cage']),
+          ]
+
+          killer_licenses = [
+              ('halloween', 'Halloween', ['Michael Myers - The Shape']),
+              ('texas-chain-saw-massacre', 'The Texas Chain Saw Massacre', ['Bubba Sawyer - The Cannibal']),
+              ('a-nightmare-on-elm-street', 'A Nightmare on Elm Street', ['Freddy Krueger - The Nightmare']),
+              ('saw', 'Saw', ['Amanda Young - The Pig']),
+              ('ghost-face', 'Ghost Face', ['Danny Johnson - The Ghost Face']),
+              ('stranger-things', 'Stranger Things', ['The Demogorgon', 'Henry Creel - The First']),
+              ('resident-evil', 'Resident Evil', ['Nemesis T-Type - The Nemesis', 'Albert Wesker - The Mastermind']),
+              ('hellraiser', 'Hellraiser', ['Elliot Spencer alias Pinhead - The Cenobite']),
+              ('ringu', 'Ringu', ['Sadako Yamamura - The Onryō']),
+              ('alien', 'Alien', ['Xenomorph XX121 - The Xenomorph']),
+              ('childs-play', "Child's Play", ['Charles Lee Ray - The Good Guy']),
+              ('dungeons-dragons', 'Dungeons & Dragons', ['Vecna - The Lich']),
+              ('castlevania', 'Castlevania', ['Vlad Tepes Dracula - The Dark Lord']),
+              ('tokyo-ghoul', 'Tokyo Ghoul', ['Ken Kaneki - The Ghoul']),
+              ('five-nights-at-freddys', "Five Nights at Freddy's", ['William Afton - The Animatronic']),
+              ('friday-13th', 'Friday the 13th', ['Jason Voorhees - The Slasher']),
+          ]
+
+          def make_groups(chars, licenses):
+              assigned = {p for _, _, people in licenses for p in people}
+              originals = sorted(set(chars) - assigned)
+              return [
+                  {'id': 'originales', 'nombre': 'Originales', 'tipo': 'grupo', 'personajes': originals},
+                  {'id': 'licencias', 'nombre': 'Licencias', 'tipo': 'grupo', 'subgrupos': [
+                      {'id': i, 'nombre': n, 'tipo': 'franquicia', 'personajes': p}
+                      for i, n, p in licenses if p
+                  ]}
+              ]
+
+          groups = {
+              'version': 1,
+              'survivors': {'grupos': make_groups(survivor_chars, survivor_licenses)},
+              'killers': {'grupos': make_groups(killer_chars, killer_licenses)},
+          }
+          (out / 'grupos.json').write_text(
+              json.dumps(groups, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8'
+          )
+          PY
+
+      - name: Commit generated JSON files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add json/survivors.json json/killers.json json/grupos.json
+          git rm -f listas.json
+          git commit -m 'Refactor JSON data structure [skip ci]' || exit 0
+          git push
