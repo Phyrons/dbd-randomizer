@@ -2,6 +2,7 @@ import { CATEGORIAS } from "./config.js";
 
 export const state = {
     listasGlobales: {},
+    grupos: {},
     personajes: [],
     listaFinal: [],
     listaDisponible: [],
