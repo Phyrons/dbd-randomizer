@@ -1,0 +1,454 @@
+{
+  "version": 1,
+  "survivors": {
+    "grupos": [
+	 {
+        "id": "survivor_general_perks",
+        "nombre": "Survivor General Perks",
+        "tipo": "grupo",
+        "personajes": [
+          "General Perk"
+        ]
+      },
+      {
+        "id": "originales",
+        "nombre": "Originals",
+        "tipo": "grupo",
+        "subgrupos": [
+			{
+				"id": "base-2016",
+				"nombre": "Pioneers of the Fog - 2016",
+				"tipo": "origin",
+				"personajes": [
+				  "Dwight Fairfield",
+				  "Meg Thomas",
+				  "Claudette Morel",
+				  "Jake Park"
+				]
+			},
+			{
+				"id": "y2016",
+				"nombre": "Chronicles of Agony - 2016",
+				"tipo": "despair",
+				"personajes": [
+				  "Nea Karlsson",
+				  "Ace Visconti"
+				]
+			},
+			{
+				"id": "y2017",
+				"nombre": "Electric Madness - 2017",
+				"tipo": "paranoia",
+				"personajes": [
+				  "Feng Min",
+				  "David King"
+				]
+			},
+			{
+				"id": "y2018",
+				"nombre": "Carnival of Blood - 2018",
+				"tipo": "vengeance",
+				"personajes": [
+				  "Kate Denson",
+				  "Adam Francis",
+				  "Jeff Johansen"
+				]
+			},
+			{
+				"id": "y2019",
+				"nombre": "Penance and Plagues - 2019",
+				"tipo": "devotion",
+				"personajes": [
+				  "Jane Romero",
+				  "Yui Kimura"
+				]
+			},
+			{
+				"id": "y2020",
+				"nombre": "Outlaws of Retribution - 2020",
+				"tipo": "desolation",
+				"personajes": [
+				  "Zarina Kassir",
+				  "Felix Richter",
+				  "Élodie Rakoto"
+				]
+			},
+			{
+				"id": "y2021",
+				"nombre": "Eclipsed Realities - 2021",
+				"tipo": "illusion",
+				"personajes": [
+				  "Lee Yun-jin",
+				  "Mikaela Reid",
+				  "Jonah Vasquez"
+				]
+			},
+			{
+				"id": "y2022",
+				"nombre": "Abyssal Echoes - 2022",
+				"tipo": "abyss",
+				"personajes": [
+				  "Yoichi Asakawa",
+				  "Haddie Kaur",
+				  "Vittorio Toscano"
+				]
+			},
+			{
+				"id": "y2023",
+				"nombre": "Synthetic Nightmares - 2023",
+				"tipo": "obsession",
+				"personajes": [
+				  "Thalita Lyra",
+				  "Renato Lyra",
+				  "Gabriel Soma"
+				]
+			},
+			{
+				"id": "y2024",
+				"nombre": "Cosmic Horrors - 2024",
+				"tipo": "unknown",
+				"personajes": [
+				  "Sable Ward",
+				  "Taurie Cain",
+				  "Kwon Tae-young"
+				]
+			},
+			{
+				"id": "y2025",
+				"nombre": "Steady Pulses - 2025",
+				"tipo": "resilience",
+				"personajes": [
+				  "Orela Rose"
+				]
+			},
+			{
+				"id": "y2026",
+				"nombre": "Steady Pulses - 2026",
+				"tipo": "resilience",
+				"personajes": [
+				  "Shane Wiigwaas",
+				  "Vee Boonyasak",
+				  "Aurora Stardotter"
+				]
+			}
+        ]
+      },
+      {
+        "id": "licencias",
+        "nombre": "Licensed",
+        "tipo": "grupo",
+        "subgrupos": [
+		  {
+            "id": "left4dead",
+            "nombre": "Left 4 Dead",
+            "tipo": "franquicia",
+            "personajes": [
+              "Bill Overbeck"
+            ]
+          },
+		  {
+            "id": "saw",
+            "nombre": "SAW",
+            "tipo": "franquicia",
+            "personajes": [
+              "Detective David Tapp"
+            ]
+          },
+		  {
+            "id": "nightmare-on-elm-street",
+            "nombre": "Nightmare on Elm Street",
+            "tipo": "franquicia",
+            "personajes": [
+              "Quentin Smith"
+            ]
+          },
+          {
+            "id": "resident-evil",
+            "nombre": "Resident Evil",
+            "tipo": "franquicia",
+            "personajes": [
+              "Jill Valentine",
+              "Leon Scott Kennedy",
+			  "Ada Wong",
+              "Rebecca Chambers"
+            ]
+          },
+          {
+            "id": "stranger-things",
+            "nombre": "Stranger Things",
+            "tipo": "franquicia",
+            "personajes": [
+              "Nancy Wheeler",
+              "Steve Harrington",
+              "Dustin Henderson",
+              "Jane Hopper — Eleven"
+            ]
+          },
+          {
+            "id": "silent-hill",
+            "nombre": "Silent Hill",
+            "tipo": "franquicia",
+            "personajes": [
+              "Cheryl Mason"
+            ]
+          },
+          {
+            "id": "halloween",
+            "nombre": "Halloween",
+            "tipo": "franquicia",
+            "personajes": [
+              "Laurie Strode"
+            ]
+          },
+          {
+            "id": "evil-dead",
+            "nombre": "Evil Dead",
+            "tipo": "franquicia",
+            "personajes": [
+              "Ash Williams"
+            ]
+          },
+          {
+            "id": "alan-wake",
+            "nombre": "Alan Wake",
+            "tipo": "franquicia",
+            "personajes": [
+              "Alan Wake"
+            ]
+          },
+          {
+            "id": "alien",
+            "nombre": "Alien",
+            "tipo": "franquicia",
+            "personajes": [
+              "Ellen Ripley"
+            ]
+          },
+          {
+            "id": "dungeons-dragons",
+            "nombre": "Dungeons & Dragons",
+            "tipo": "franquicia",
+            "personajes": [
+              "Aestri Yazar & Baermar Uraz"
+            ]
+          },
+          {
+            "id": "tomb-raider",
+            "nombre": "Tomb Raider",
+            "tipo": "franquicia",
+            "personajes": [
+              "Lara Croft"
+            ]
+          },
+          {
+            "id": "castlevania",
+            "nombre": "Castlevania",
+            "tipo": "franquicia",
+            "personajes": [
+              "Trevor Belmont"
+            ]
+          },
+          {
+            "id": "the-walking-dead",
+            "nombre": "The Walking Dead",
+            "tipo": "franquicia",
+            "personajes": [
+              "Rick Grimes",
+              "Michonne Grimes"
+            ]
+          },
+          {
+            "id": "nicolas-cage",
+            "nombre": "Nicolas Cage",
+            "tipo": "franquicia",
+            "personajes": [
+              "Nicolas Cage"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "killers": {
+    "grupos": [
+	  {
+        "id": "killer_general_perks",
+        "nombre": "Killer General Perks",
+        "tipo": "grupo",
+        "personajes": [
+          "General Perk"
+        ]
+      },
+      {
+        "id": "originales",
+        "nombre": "Originals",
+        "tipo": "grupo",
+        "personajes": [
+          "Adiris - The Plague",
+          "Adriana Imai - The Skull Merchant",
+          "Anna - The Huntress",
+          "Burong Sukapat - The Krasue",
+          "Caleb Quinn - The Deathslinger",
+          "Carmina Mora - The Artist",
+          "Charlotte & Victor Deshayes - The Twins",
+          "Evan MacMillan - The Trapper",
+          "Frank, Julie, Susie, Joey - The Legion",
+          "HUX-A7-13 - The Singularity",
+          "Hak Ji-woon - The Trickster",
+          "Herman Carter - The Doctor",
+          "Kazan Yamaoka - The Oni",
+          "Kenneth Chase alias Jeffrey Hawk — The Clown",
+          "Lisa Sherwood - The Hag",
+          "Max Thompson Jr. - The Hillbilly",
+          "Philip Ojomo - The Wraith",
+          "Portia Maye - The Houndmaster",
+          "Pyramid Head - The Executioner",
+          "Rin Yamaoka - The Spirit",
+          "Sally Smithson - The Nurse",
+          "Talbot Grimes - The Blight",
+          "Tarhos Kovács - The Knight",
+          "The Dredge",
+          "The Judgment",
+          "The Unknown"
+        ]
+      },
+      {
+        "id": "licencias",
+        "nombre": "Licensed",
+        "tipo": "grupo",
+        "subgrupos": [
+          {
+            "id": "halloween",
+            "nombre": "Halloween",
+            "tipo": "franquicia",
+            "personajes": [
+              "Michael Myers - The Shape"
+            ]
+          },
+          {
+            "id": "texas-chain-saw-massacre",
+            "nombre": "The Texas Chain Saw Massacre",
+            "tipo": "franquicia",
+            "personajes": [
+              "Bubba Sawyer - The Cannibal"
+            ]
+          },
+          {
+            "id": "a-nightmare-on-elm-street",
+            "nombre": "A Nightmare on Elm Street",
+            "tipo": "franquicia",
+            "personajes": [
+              "Freddy Krueger - The Nightmare"
+            ]
+          },
+          {
+            "id": "saw",
+            "nombre": "Saw",
+            "tipo": "franquicia",
+            "personajes": [
+              "Amanda Young - The Pig"
+            ]
+          },
+          {
+            "id": "ghost-face",
+            "nombre": "Ghost Face",
+            "tipo": "franquicia",
+            "personajes": [
+              "Danny Johnson - The Ghost Face"
+            ]
+          },
+          {
+            "id": "stranger-things",
+            "nombre": "Stranger Things",
+            "tipo": "franquicia",
+            "personajes": [
+              "The Demogorgon",
+              "Henry Creel - The First"
+            ]
+          },
+          {
+            "id": "resident-evil",
+            "nombre": "Resident Evil",
+            "tipo": "franquicia",
+            "personajes": [
+              "Nemesis T-Type - The Nemesis",
+              "Albert Wesker - The Mastermind"
+            ]
+          },
+          {
+            "id": "hellraiser",
+            "nombre": "Hellraiser",
+            "tipo": "franquicia",
+            "personajes": [
+              "Elliot Spencer alias Pinhead - The Cenobite"
+            ]
+          },
+          {
+            "id": "ringu",
+            "nombre": "Ringu",
+            "tipo": "franquicia",
+            "personajes": [
+              "Sadako Yamamura - The Onryō"
+            ]
+          },
+          {
+            "id": "alien",
+            "nombre": "Alien",
+            "tipo": "franquicia",
+            "personajes": [
+              "Xenomorph XX121 - The Xenomorph"
+            ]
+          },
+          {
+            "id": "childs-play",
+            "nombre": "Child's Play",
+            "tipo": "franquicia",
+            "personajes": [
+              "Charles Lee Ray - The Good Guy"
+            ]
+          },
+          {
+            "id": "dungeons-dragons",
+            "nombre": "Dungeons & Dragons",
+            "tipo": "franquicia",
+            "personajes": [
+              "Vecna - The Lich"
+            ]
+          },
+          {
+            "id": "castlevania",
+            "nombre": "Castlevania",
+            "tipo": "franquicia",
+            "personajes": [
+              "Vlad Tepes Dracula - The Dark Lord"
+            ]
+          },
+          {
+            "id": "tokyo-ghoul",
+            "nombre": "Tokyo Ghoul",
+            "tipo": "franquicia",
+            "personajes": [
+              "Ken Kaneki - The Ghoul"
+            ]
+          },
+          {
+            "id": "five-nights-at-freddys",
+            "nombre": "Five Nights at Freddy's",
+            "tipo": "franquicia",
+            "personajes": [
+              "William Afton - The Animatronic"
+            ]
+          },
+          {
+            "id": "friday-13th",
+            "nombre": "Friday the 13th",
+            "tipo": "franquicia",
+            "personajes": [
+              "Jason Voorhees - The Slasher"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
