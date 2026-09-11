@@ -152,7 +152,7 @@ function renderizarEstadoCompleto() {
 
     const actualizarEstadoSinPerk = () => {
         const activo = state.sinPerkHabilitadoPorCategoria[state.categoriaActual];
-        sinPerkButton.textContent = `SIN PERK: ${activo ? "ON" : "OFF"}`;
+        sinPerkButton.textContent = `NO PERK: ${activo ? "ON" : "OFF"}`;
         sinPerkButton.classList.toggle("sin-perk-activo", activo);
     };
 
