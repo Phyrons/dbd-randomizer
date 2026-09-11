@@ -2,7 +2,7 @@
   "version": 1,
   "survivors": {
     "grupos": [
-	 {
+      {
         "id": "survivor_general_perks",
         "nombre": "Survivor General Perks",
         "tipo": "grupo",
@@ -11,205 +11,263 @@
         ]
       },
       {
-        "id": "originales",
-        "nombre": "Originals",
-        "tipo": "grupo",
+        "id": "y2016",
+        "nombre": "2016",
+        "tipo": "year",
         "subgrupos": [
-			{
-				"id": "base-2016",
-				"nombre": "Pioneers of the Fog - 2016",
-				"tipo": "origin",
-				"personajes": [
-				  "Dwight Fairfield",
-				  "Meg Thomas",
-				  "Claudette Morel",
-				  "Jake Park"
-				]
-			},
-			{
-				"id": "y2016",
-				"nombre": "Chronicles of Agony - 2016",
-				"tipo": "despair",
-				"personajes": [
-				  "Nea Karlsson",
-				  "Ace Visconti"
-				]
-			},
-			{
-				"id": "y2017",
-				"nombre": "Electric Madness - 2017",
-				"tipo": "paranoia",
-				"personajes": [
-				  "Feng Min",
-				  "David King"
-				]
-			},
-			{
-				"id": "y2018",
-				"nombre": "Carnival of Blood - 2018",
-				"tipo": "vengeance",
-				"personajes": [
-				  "Kate Denson",
-				  "Adam Francis",
-				  "Jeff Johansen"
-				]
-			},
-			{
-				"id": "y2019",
-				"nombre": "Penance and Plagues - 2019",
-				"tipo": "devotion",
-				"personajes": [
-				  "Jane Romero",
-				  "Yui Kimura"
-				]
-			},
-			{
-				"id": "y2020",
-				"nombre": "Outlaws of Retribution - 2020",
-				"tipo": "desolation",
-				"personajes": [
-				  "Zarina Kassir",
-				  "Felix Richter",
-				  "Élodie Rakoto"
-				]
-			},
-			{
-				"id": "y2021",
-				"nombre": "Eclipsed Realities - 2021",
-				"tipo": "illusion",
-				"personajes": [
-				  "Lee Yun-jin",
-				  "Mikaela Reid",
-				  "Jonah Vasquez"
-				]
-			},
-			{
-				"id": "y2022",
-				"nombre": "Abyssal Echoes - 2022",
-				"tipo": "abyss",
-				"personajes": [
-				  "Yoichi Asakawa",
-				  "Haddie Kaur",
-				  "Vittorio Toscano"
-				]
-			},
-			{
-				"id": "y2023",
-				"nombre": "Synthetic Nightmares - 2023",
-				"tipo": "obsession",
-				"personajes": [
-				  "Thalita Lyra",
-				  "Renato Lyra",
-				  "Gabriel Soma"
-				]
-			},
-			{
-				"id": "y2024",
-				"nombre": "Cosmic Horrors - 2024",
-				"tipo": "unknown",
-				"personajes": [
-				  "Sable Ward",
-				  "Taurie Cain",
-				  "Kwon Tae-young"
-				]
-			},
-			{
-				"id": "y2025",
-				"nombre": "Steady Pulses - 2025",
-				"tipo": "resilience",
-				"personajes": [
-				  "Orela Rose"
-				]
-			},
-			{
-				"id": "y2026",
-				"nombre": "Steady Pulses - 2026",
-				"tipo": "resilience",
-				"personajes": [
-				  "Shane Wiigwaas",
-				  "Vee Boonyasak",
-				  "Aurora Stardotter"
-				]
-			}
+          {
+            "id": "originals-pioneers-2016",
+            "nombre": "Pioneers of the Fog - 2016",
+            "tipo": "origin",
+            "personajes": [
+              "Dwight Fairfield",
+              "Meg Thomas",
+              "Claudette Morel",
+              "Jake Park"
+            ]
+          },
+          {
+            "id": "originals-chronicles-2016",
+            "nombre": "Chronicles of Agony - 2016",
+            "tipo": "despair",
+            "personajes": [
+              "Nea Karlsson",
+              "Ace Visconti"
+            ]
+          },
+          {
+            "id": "licensed-halloween-2016",
+            "nombre": "Halloween",
+            "tipo": "franquicia",
+            "personajes": [
+              "Laurie Strode"
+            ]
+          }
         ]
       },
       {
-        "id": "licencias",
-        "nombre": "Licensed",
-        "tipo": "grupo",
+        "id": "y2017",
+        "nombre": "2017",
+        "tipo": "year",
         "subgrupos": [
-		  {
-            "id": "left4dead",
+          {
+            "id": "originals-electric-madness-2017",
+            "nombre": "Electric Madness - 2017",
+            "tipo": "paranoia",
+            "personajes": [
+              "Feng Min",
+              "David King"
+            ]
+          },
+          {
+            "id": "licensed-left4dead-2017",
             "nombre": "Left 4 Dead",
             "tipo": "franquicia",
             "personajes": [
               "Bill Overbeck"
             ]
           },
-		  {
-            "id": "saw",
+          {
+            "id": "licensed-nightmare-2017",
+            "nombre": "A Nightmare on Elm Street",
+            "tipo": "franquicia",
+            "personajes": [
+              "Quentin Smith"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "y2018",
+        "nombre": "2018",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-carnival-2018",
+            "nombre": "Carnival of Blood - 2018",
+            "tipo": "vengeance",
+            "personajes": [
+              "Kate Denson",
+              "Adam Francis",
+              "Jeff Johansen"
+            ]
+          },
+          {
+            "id": "licensed-saw-2018",
             "nombre": "SAW",
             "tipo": "franquicia",
             "personajes": [
               "Detective David Tapp"
             ]
-          },
-		  {
-            "id": "nightmare-on-elm-street",
-            "nombre": "Nightmare on Elm Street",
-            "tipo": "franquicia",
+          }
+        ]
+      },
+      {
+        "id": "y2019",
+        "nombre": "2019",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-penance-2019",
+            "nombre": "Penance and Plagues - 2019",
+            "tipo": "devotion",
             "personajes": [
-              "Quentin Smith"
+              "Jane Romero",
+              "Yui Kimura"
             ]
           },
           {
-            "id": "resident-evil",
-            "nombre": "Resident Evil",
-            "tipo": "franquicia",
-            "personajes": [
-              "Jill Valentine",
-              "Leon Scott Kennedy",
-			  "Ada Wong",
-              "Rebecca Chambers"
-            ]
-          },
-          {
-            "id": "stranger-things",
+            "id": "licensed-stranger-things-2019",
             "nombre": "Stranger Things",
             "tipo": "franquicia",
             "personajes": [
               "Nancy Wheeler",
-              "Steve Harrington",
-              "Dustin Henderson",
-              "Jane Hopper — Eleven"
+              "Steve Harrington"
             ]
           },
           {
-            "id": "silent-hill",
-            "nombre": "Silent Hill",
-            "tipo": "franquicia",
-            "personajes": [
-              "Cheryl Mason"
-            ]
-          },
-          {
-            "id": "halloween",
-            "nombre": "Halloween",
-            "tipo": "franquicia",
-            "personajes": [
-              "Laurie Strode"
-            ]
-          },
-          {
-            "id": "evil-dead",
+            "id": "licensed-evil-dead-2019",
             "nombre": "Evil Dead",
             "tipo": "franquicia",
             "personajes": [
               "Ash Williams"
             ]
+          }
+        ]
+      },
+      {
+        "id": "y2020",
+        "nombre": "2020",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-outlaws-2020",
+            "nombre": "Outlaws of Retribution - 2020",
+            "tipo": "desolation",
+            "personajes": [
+              "Zarina Kassir",
+              "Felix Richter",
+              "Élodie Rakoto"
+            ]
           },
           {
-            "id": "alan-wake",
+            "id": "licensed-silent-hill-2020",
+            "nombre": "Silent Hill",
+            "tipo": "franquicia",
+            "personajes": [
+              "Cheryl Mason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "y2021",
+        "nombre": "2021",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-eclipsed-2021",
+            "nombre": "Eclipsed Realities - 2021",
+            "tipo": "illusion",
+            "personajes": [
+              "Lee Yun-jin",
+              "Mikaela Reid",
+              "Jonah Vasquez"
+            ]
+          },
+          {
+            "id": "licensed-resident-evil-2021",
+            "nombre": "Resident Evil",
+            "tipo": "franquicia",
+            "personajes": [
+              "Jill Valentine",
+              "Leon Scott Kennedy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "y2022",
+        "nombre": "2022",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-abyssal-2022",
+            "nombre": "Abyssal Echoes - 2022",
+            "tipo": "abyss",
+            "personajes": [
+              "Haddie Kaur",
+              "Vittorio Toscano"
+            ]
+          },
+          {
+            "id": "licensed-ringu-2022",
+            "nombre": "Ringu",
+            "tipo": "franquicia",
+            "personajes": [
+              "Yoichi Asakawa"
+            ]
+          },
+          {
+            "id": "licensed-resident-evil-project-w-2022",
+            "nombre": "Resident Evil",
+            "tipo": "franquicia",
+            "personajes": [
+              "Ada Wong",
+              "Rebecca Chambers"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "y2023",
+        "nombre": "2023",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-synthetic-2023",
+            "nombre": "Synthetic Nightmares - 2023",
+            "tipo": "obsession",
+            "personajes": [
+              "Thalita Lyra",
+              "Renato Lyra",
+              "Gabriel Soma"
+            ]
+          },
+          {
+            "id": "licensed-nicolas-cage-2023",
+            "nombre": "Nicolas Cage",
+            "tipo": "franquicia",
+            "personajes": [
+              "Nicolas Cage"
+            ]
+          },
+          {
+            "id": "licensed-alien-2023",
+            "nombre": "Alien",
+            "tipo": "franquicia",
+            "personajes": [
+              "Ellen Ripley"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "y2024",
+        "nombre": "2024",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-cosmic-2024",
+            "nombre": "Cosmic Horrors - 2024",
+            "tipo": "unknown",
+            "personajes": [
+              "Sable Ward",
+              "Taurie Cain"
+            ]
+          },
+          {
+            "id": "licensed-alan-wake-2024",
             "nombre": "Alan Wake",
             "tipo": "franquicia",
             "personajes": [
@@ -217,15 +275,7 @@
             ]
           },
           {
-            "id": "alien",
-            "nombre": "Alien",
-            "tipo": "franquicia",
-            "personajes": [
-              "Ellen Ripley"
-            ]
-          },
-          {
-            "id": "dungeons-dragons",
+            "id": "licensed-dungeons-dragons-2024",
             "nombre": "Dungeons & Dragons",
             "tipo": "franquicia",
             "personajes": [
@@ -233,7 +283,7 @@
             ]
           },
           {
-            "id": "tomb-raider",
+            "id": "licensed-tomb-raider-2024",
             "nombre": "Tomb Raider",
             "tipo": "franquicia",
             "personajes": [
@@ -241,28 +291,89 @@
             ]
           },
           {
-            "id": "castlevania",
+            "id": "licensed-castlevania-2024",
             "nombre": "Castlevania",
             "tipo": "franquicia",
             "personajes": [
               "Trevor Belmont"
             ]
+          }
+        ]
+      },
+      {
+        "id": "y2025",
+        "nombre": "2025",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-steady-pulse-2025",
+            "nombre": "Steady Pulse - 2025",
+            "tipo": "resilience",
+            "personajes": [
+              "Orela Rose"
+            ]
           },
           {
-            "id": "the-walking-dead",
+            "id": "originals-sinister-grace-2025",
+            "nombre": "Sinister Grace - 2025",
+            "tipo": "grace",
+            "personajes": [
+              "Vee Boonyasak"
+            ]
+          },
+          {
+            "id": "licensed-the-walking-dead-2025",
             "nombre": "The Walking Dead",
             "tipo": "franquicia",
             "personajes": [
               "Rick Grimes",
               "Michonne Grimes"
             ]
+          }
+        ]
+      },
+      {
+        "id": "y2026",
+        "nombre": "2026",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-life-road-2026",
+            "nombre": "The Life Road - 2026",
+            "tipo": "justice",
+            "personajes": [
+              "Shane Wiigwaas"
+            ]
           },
           {
-            "id": "nicolas-cage",
-            "nombre": "Nicolas Cage",
+            "id": "originals-all-kill-comeback-2026",
+            "nombre": "All-Kill: Comeback - 2026",
+            "tipo": "comeback",
+            "personajes": [
+              "Kwon Tae-young"
+            ]
+          },
+          {
+            "id": "licensed-stranger-things-chapter-2-2026",
+            "nombre": "Stranger Things",
             "tipo": "franquicia",
             "personajes": [
-              "Nicolas Cage"
+              "Dustin Henderson",
+              "Jane Hopper — Eleven"
+            ]
+          },
+          {
+            "id": "licensed-friday-13th-2026",
+            "nombre": "Friday the 13th",
+            "tipo": "franquicia",
+            "personajes": []
+          },
+          {
+            "id": "community-chorus-of-sin-2026",
+            "nombre": "Chorus of Sin",
+            "tipo": "community",
+            "personajes": [
+              "Aurora Stardotter"
             ]
           }
         ]
@@ -271,7 +382,7 @@
   },
   "killers": {
     "grupos": [
-	  {
+      {
         "id": "killer_general_perks",
         "nombre": "Killer General Perks",
         "tipo": "grupo",
@@ -280,53 +391,69 @@
         ]
       },
       {
-        "id": "originales",
-        "nombre": "Originals",
-        "tipo": "grupo",
-        "personajes": [
-          "Adiris - The Plague",
-          "Adriana Imai - The Skull Merchant",
-          "Anna - The Huntress",
-          "Burong Sukapat - The Krasue",
-          "Caleb Quinn - The Deathslinger",
-          "Carmina Mora - The Artist",
-          "Charlotte & Victor Deshayes - The Twins",
-          "Evan MacMillan - The Trapper",
-          "Frank, Julie, Susie, Joey - The Legion",
-          "HUX-A7-13 - The Singularity",
-          "Hak Ji-woon - The Trickster",
-          "Herman Carter - The Doctor",
-          "Kazan Yamaoka - The Oni",
-          "Kenneth Chase alias Jeffrey Hawk — The Clown",
-          "Lisa Sherwood - The Hag",
-          "Max Thompson Jr. - The Hillbilly",
-          "Philip Ojomo - The Wraith",
-          "Portia Maye - The Houndmaster",
-          "Pyramid Head - The Executioner",
-          "Rin Yamaoka - The Spirit",
-          "Sally Smithson - The Nurse",
-          "Talbot Grimes - The Blight",
-          "Tarhos Kovács - The Knight",
-          "The Dredge",
-          "The Judgment",
-          "The Unknown"
-        ]
-      },
-      {
-        "id": "licencias",
-        "nombre": "Licensed",
-        "tipo": "grupo",
+        "id": "y2016",
+        "nombre": "2016",
+        "tipo": "year",
         "subgrupos": [
           {
-            "id": "halloween",
+            "id": "originals-pioneers-2016",
+            "nombre": "Pioneers of the Fog - 2016",
+            "tipo": "origin",
+            "personajes": [
+              "Evan MacMillan - The Trapper",
+              "Philip Ojomo - The Wraith",
+              "Max Thompson Jr. - The Hillbilly"
+            ]
+          },
+          {
+            "id": "originals-last-breath-2016",
+            "nombre": "The Last Breath - 2016",
+            "tipo": "origin",
+            "personajes": [
+              "Sally Smithson - The Nurse"
+            ]
+          },
+          {
+            "id": "originals-flesh-mud-2016",
+            "nombre": "Of Flesh and Mud - 2016",
+            "tipo": "origin",
+            "personajes": [
+              "Lisa Sherwood - The Hag"
+            ]
+          },
+          {
+            "id": "licensed-halloween-2016",
             "nombre": "Halloween",
             "tipo": "franquicia",
             "personajes": [
               "Michael Myers - The Shape"
             ]
+          }
+        ]
+      },
+      {
+        "id": "y2017",
+        "nombre": "2017",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-spark-madness-2017",
+            "nombre": "Electric Madness - 2017",
+            "tipo": "paranoia",
+            "personajes": [
+              "Herman Carter - The Doctor"
+            ]
           },
           {
-            "id": "texas-chain-saw-massacre",
+            "id": "originals-lullaby-dark-2017",
+            "nombre": "Lullaby of the Dark - 2017",
+            "tipo": "darkness",
+            "personajes": [
+              "Anna - The Huntress"
+            ]
+          },
+          {
+            "id": "licensed-texas-chain-saw-2017",
             "nombre": "The Texas Chain Saw Massacre",
             "tipo": "franquicia",
             "personajes": [
@@ -334,23 +461,70 @@
             ]
           },
           {
-            "id": "a-nightmare-on-elm-street",
+            "id": "licensed-nightmare-2017",
             "nombre": "A Nightmare on Elm Street",
             "tipo": "franquicia",
             "personajes": [
               "Freddy Krueger - The Nightmare"
             ]
+          }
+        ]
+      },
+      {
+        "id": "y2018",
+        "nombre": "2018",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-carnival-clown-2018",
+            "nombre": "Carnival of Blood - 2018",
+            "tipo": "vengeance",
+            "personajes": [
+              "Kenneth Chase alias Jeffrey Hawk — The Clown"
+            ]
           },
           {
-            "id": "saw",
-            "nombre": "Saw",
+            "id": "originals-shattered-bloodline-2018",
+            "nombre": "Shattered Bloodline - 2018",
+            "tipo": "bloodline",
+            "personajes": [
+              "Rin Yamaoka - The Spirit"
+            ]
+          },
+          {
+            "id": "originals-darkness-among-us-2018",
+            "nombre": "Darkness Among Us - 2018",
+            "tipo": "vengeance",
+            "personajes": [
+              "Frank, Julie, Susie, Joey - The Legion"
+            ]
+          },
+          {
+            "id": "licensed-saw-2018",
+            "nombre": "SAW",
             "tipo": "franquicia",
             "personajes": [
               "Amanda Young - The Pig"
             ]
+          }
+        ]
+      },
+      {
+        "id": "y2019",
+        "nombre": "2019",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-penance-plague-2019",
+            "nombre": "Penance and Plagues - 2019",
+            "tipo": "devotion",
+            "personajes": [
+              "Adiris - The Plague",
+              "Kazan Yamaoka - The Oni"
+            ]
           },
           {
-            "id": "ghost-face",
+            "id": "licensed-ghost-face-2019",
             "nombre": "Ghost Face",
             "tipo": "franquicia",
             "personajes": [
@@ -358,33 +532,116 @@
             ]
           },
           {
-            "id": "stranger-things",
+            "id": "licensed-stranger-things-2019",
             "nombre": "Stranger Things",
             "tipo": "franquicia",
             "personajes": [
-              "The Demogorgon",
-              "Henry Creel - The First"
+              "The Demogorgon"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "y2020",
+        "nombre": "2020",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-outlaws-deathslinger-2020",
+            "nombre": "Outlaws of Retribution - 2020",
+            "tipo": "desolation",
+            "personajes": [
+              "Caleb Quinn - The Deathslinger"
             ]
           },
           {
-            "id": "resident-evil",
+            "id": "originals-descend-beyond-2020",
+            "nombre": "Synthetic Descent - 2020",
+            "tipo": "desolation",
+            "personajes": [
+              "Talbot Grimes - The Blight"
+            ]
+          },
+          {
+            "id": "originals-binding-kin-2020",
+            "nombre": "A Binding of Kin - 2020",
+            "tipo": "kin",
+            "personajes": [
+              "Charlotte & Victor Deshayes - The Twins"
+            ]
+          },
+          {
+            "id": "licensed-silent-hill-2020",
+            "nombre": "Silent Hill",
+            "tipo": "franquicia",
+            "personajes": [
+              "Pyramid Head - The Executioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "y2021",
+        "nombre": "2021",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-eclipsed-trickster-2021",
+            "nombre": "Eclipsed Realities - 2021",
+            "tipo": "illusion",
+            "personajes": [
+              "Hak Ji-woon - The Trickster"
+            ]
+          },
+          {
+            "id": "originals-portrait-murder-2021",
+            "nombre": "Portrait of a Murder - 2021",
+            "tipo": "portrait",
+            "personajes": [
+              "Carmina Mora - The Artist"
+            ]
+          },
+          {
+            "id": "licensed-resident-evil-2021",
             "nombre": "Resident Evil",
             "tipo": "franquicia",
             "personajes": [
-              "Nemesis T-Type - The Nemesis",
-              "Albert Wesker - The Mastermind"
+              "Nemesis T-Type - The Nemesis"
             ]
           },
           {
-            "id": "hellraiser",
+            "id": "licensed-hellraiser-2021",
             "nombre": "Hellraiser",
             "tipo": "franquicia",
             "personajes": [
               "Elliot Spencer alias Pinhead - The Cenobite"
             ]
+          }
+        ]
+      },
+      {
+        "id": "y2022",
+        "nombre": "2022",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-abyssal-dredge-2022",
+            "nombre": "Abyssal Echoes - 2022",
+            "tipo": "abyss",
+            "personajes": [
+              "The Dredge"
+            ]
           },
           {
-            "id": "ringu",
+            "id": "originals-forged-fog-2022",
+            "nombre": "Forged in Fog - 2022",
+            "tipo": "fog",
+            "personajes": [
+              "Tarhos Kovács - The Knight"
+            ]
+          },
+          {
+            "id": "licensed-ringu-2022",
             "nombre": "Ringu",
             "tipo": "franquicia",
             "personajes": [
@@ -392,7 +649,38 @@
             ]
           },
           {
-            "id": "alien",
+            "id": "licensed-resident-evil-project-w-2022",
+            "nombre": "Resident Evil",
+            "tipo": "franquicia",
+            "personajes": [
+              "Albert Wesker - The Mastermind"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "y2023",
+        "nombre": "2023",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-synthetic-merchant-2023",
+            "nombre": "Synthetic Nightmares - 2023",
+            "tipo": "obsession",
+            "personajes": [
+              "Adriana Imai - The Skull Merchant"
+            ]
+          },
+          {
+            "id": "originals-end-transmission-2023",
+            "nombre": "End Transmission - 2023",
+            "tipo": "synthetic",
+            "personajes": [
+              "HUX-A7-13 - The Singularity"
+            ]
+          },
+          {
+            "id": "licensed-alien-2023",
             "nombre": "Alien",
             "tipo": "franquicia",
             "personajes": [
@@ -400,15 +688,38 @@
             ]
           },
           {
-            "id": "childs-play",
+            "id": "licensed-childs-play-2023",
             "nombre": "Child's Play",
             "tipo": "franquicia",
             "personajes": [
               "Charles Lee Ray - The Good Guy"
             ]
+          }
+        ]
+      },
+      {
+        "id": "y2024",
+        "nombre": "2024",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-cosmic-unknown-2024",
+            "nombre": "Cosmic Horrors - 2024",
+            "tipo": "unknown",
+            "personajes": [
+              "The Unknown"
+            ]
           },
           {
-            "id": "dungeons-dragons",
+            "id": "originals-doomed-course-2024",
+            "nombre": "Doomed Course - 2024",
+            "tipo": "desolation",
+            "personajes": [
+              "Portia Maye - The Houndmaster"
+            ]
+          },
+          {
+            "id": "licensed-dungeons-dragons-2024",
             "nombre": "Dungeons & Dragons",
             "tipo": "franquicia",
             "personajes": [
@@ -416,15 +727,30 @@
             ]
           },
           {
-            "id": "castlevania",
+            "id": "licensed-castlevania-2024",
             "nombre": "Castlevania",
             "tipo": "franquicia",
             "personajes": [
               "Vlad Tepes Dracula - The Dark Lord"
             ]
+          }
+        ]
+      },
+      {
+        "id": "y2025",
+        "nombre": "2025",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "originals-sinister-grace-2025",
+            "nombre": "Sinister Grace - 2025",
+            "tipo": "grace",
+            "personajes": [
+              "Burong Sukapat - The Krasue"
+            ]
           },
           {
-            "id": "tokyo-ghoul",
+            "id": "licensed-tokyo-ghoul-2025",
             "nombre": "Tokyo Ghoul",
             "tipo": "franquicia",
             "personajes": [
@@ -432,19 +758,42 @@
             ]
           },
           {
-            "id": "five-nights-at-freddys",
+            "id": "licensed-five-nights-freddys-2025",
             "nombre": "Five Nights at Freddy's",
             "tipo": "franquicia",
             "personajes": [
               "William Afton - The Animatronic"
             ]
+          }
+        ]
+      },
+      {
+        "id": "y2026",
+        "nombre": "2026",
+        "tipo": "year",
+        "subgrupos": [
+          {
+            "id": "licensed-stranger-things-chapter-2-2026",
+            "nombre": "Stranger Things",
+            "tipo": "franquicia",
+            "personajes": [
+              "Henry Creel - The First"
+            ]
           },
           {
-            "id": "friday-13th",
+            "id": "licensed-friday-13th-2026",
             "nombre": "Friday the 13th",
             "tipo": "franquicia",
             "personajes": [
               "Jason Voorhees - The Slasher"
+            ]
+          },
+          {
+            "id": "community-chorus-of-sin-2026",
+            "nombre": "Chorus of Sin",
+            "tipo": "community",
+            "personajes": [
+              "The Judgment"
             ]
           }
         ]
