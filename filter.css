@@ -3,13 +3,20 @@
 /* ========================================================= */
 
 /* El contenedor completo del filtro debe ser un bloque.
-   style.css define .grid-personajes como grid, por lo que
-   aquí lo anulamos explícitamente. */
+   style.css define .grid-personajes como grid, así que aquí
+   lo anulamos explícitamente. */
 .grid-personajes {
     display: block;
     width: 100%;
     margin: 18px 0 0;
     text-align: left;
+    box-sizing: border-box;
+}
+
+/* El modal debe aprovechar mucho más el ancho de la página. */
+.modal-content {
+    width: 95vw;
+    max-width: 1600px;
     box-sizing: border-box;
 }
 
@@ -62,7 +69,6 @@
     box-sizing: border-box;
 }
 
-/* Cada año ocupa todo el ancho disponible. */
 .filtro-bloque-anual {
     width: 100%;
     box-sizing: border-box;
@@ -94,7 +100,6 @@
     box-sizing: border-box;
 }
 
-/* Cada tarjeta utiliza todo el ancho de su columna. */
 .filtro-grupo-card {
     width: 100%;
     min-width: 0;
@@ -195,16 +200,6 @@
     font-family: 'Anta', sans-serif;
     font-size: 12px;
     font-style: italic;
-}
-
-/* --------------------------------------------------------- */
-/* GRUPO ESPECIAL: GENERAL PERKS                             */
-/* --------------------------------------------------------- */
-
-/* General Perks también se mantiene dentro de una tarjeta,
-   pero sin forzarla a ocupar toda la ventana. */
-.filtro-contenido > .filtro-grupo-card {
-    width: 100%;
 }
 
 /* --------------------------------------------------------- */
