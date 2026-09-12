@@ -12,8 +12,17 @@ function obtenerGruposActuales() {
 
 function obtenerTodosLosPersonajes(grupo) {
     const directos = grupo.personajes || [];
-    const subgrupos = (grupo.subgrupos || []).flatMap(subgrupo => subgrupo.personajes || []);
+    const subgrupos = (grupo.subgrupos || []).flatMap(subgrupo => obtenerTodosLosPersonajes(subgrupo));
     return [...new Set([...directos, ...subgrupos])];
+}
+
+function obtenerPersonajesActuales() {
+    return [...new Set(obtenerGruposActuales().flatMap(obtenerTodosLosPersonajes))];
+}
+
+function obtenerPerksDePersonaje(nombre) {
+    const lista = state.listasGlobales?.[state.categoriaActual] || [];
+    return lista.filter(perk => perk.personaje === nombre);
 }
 
 function estaExcluido(nombre) {
@@ -62,79 +71,78 @@ function actualizarEstadoGrupo(input, personajes) {
     input.indeterminate = excluidos > 0 && excluidos < personajes.length;
 }
 
-function renderizarPersonaje(nombre, contenedor, controlesGrupo) {
-    const { label, input } = crearCheckbox(nombre, !estaExcluido(nombre), "filtro-personaje");
+function crearTarjetaPerk(perk) {
+    const item = document.createElement("div");
+    item.className = "filtro-perk";
+
+    const imagen = document.createElement("img");
+    imagen.src = `img/${perk.archivo}`;
+    imagen.alt = "";
+    imagen.loading = "lazy";
+
+    const nombre = document.createElement("span");
+    nombre.textContent = state.idiomaActual === "esp" && perk.nombre_es
+        ? perk.nombre_es
+        : perk.nombre;
+
+    item.append(imagen, nombre);
+    return item;
+}
+
+function renderizarPersonaje(nombre, contenedor) {
+    const tarjeta = document.createElement("article");
+    tarjeta.className = "filtro-personaje-card";
+
+    const cabecera = document.createElement("label");
+    cabecera.className = "filtro-personaje-cabecera";
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.checked = !estaExcluido(nombre);
+    input.setAttribute("aria-label", `Include ${nombre}`);
+
+    const titulo = document.createElement("span");
+    titulo.className = "filtro-personaje-nombre";
+    titulo.textContent = nombre;
+
+    cabecera.append(input, titulo);
+    tarjeta.appendChild(cabecera);
+
+    const perks = document.createElement("div");
+    perks.className = "filtro-perks";
+
+    obtenerPerksDePersonaje(nombre).forEach(perk => {
+        perks.appendChild(crearTarjetaPerk(perk));
+    });
+
+    if (!perks.children.length) {
+        const vacio = document.createElement("span");
+        vacio.className = "filtro-perks-vacio";
+        vacio.textContent = "No character perks";
+        perks.appendChild(vacio);
+    }
+
+    tarjeta.appendChild(perks);
 
     input.addEventListener("change", () => {
         establecerExclusion(nombre, !input.checked);
-        controlesGrupo.forEach(({ input: grupoInput, personajes }) => {
-            actualizarEstadoGrupo(grupoInput, personajes);
-        });
+        tarjeta.classList.toggle("excluido", !input.checked);
     });
 
-    contenedor.appendChild(label);
+    tarjeta.classList.toggle("excluido", !input.checked);
+    contenedor.appendChild(tarjeta);
 }
 
-function renderizarGrupo(grupo, nivel = 0, controlesGrupo = []) {
-	const detalles = document.createElement("details");
-	detalles.className = `filtro-grupo nivel-${nivel}`.trim();
+function renderizarGrupoDePersonajes(grupo, contenedor, personajesRenderizados) {
+    obtenerTodosLosPersonajes(grupo).forEach(nombre => {
+        if (personajesRenderizados.has(nombre)) return;
+        personajesRenderizados.add(nombre);
+        renderizarPersonaje(nombre, contenedor);
+    });
 
-	// DETALLE 1: Iniciar cerrados por defecto
-	detalles.open = false;
-
-	// Comportamiento de Acordeón: cerrar otros del mismo nivel al abrir este
-	detalles.addEventListener('toggle', () => {
-	if (detalles.open) {
-	const hermanos = detalles.parentElement.querySelectorAll(`:scope > .filtro-grupo.nivel-${nivel}`);
-	hermanos.forEach(hermano => {
-	if (hermano !== detalles) hermano.open = false;
-	});
-	}
-	});
-
-	const resumen = document.createElement("summary");
-	const personajes = obtenerTodosLosPersonajes(grupo);
-
-	const { label, input } = crearCheckbox(
-	grupo.nombre,
-	personajes.length === 0 || personajes.every(nombre => !estaExcluido(nombre)),
-	"filtro-grupo-checkbox"
-	);
-
-	label.addEventListener("click", event => event.stopPropagation());
-
-	input.addEventListener("change", () => {
-	establecerExclusionGrupo(personajes, !input.checked);
-
-	// DETALLE 1: Actualizamos solo los estados visuales internos en vez de redibujar todo
-	controlesGrupo.forEach(({ input: grupoInput, personajes: listaP }) => {
-	actualizarEstadoGrupo(grupoInput, listaP);
-	});
-	// Si hay elementos hijos (personajes individuales), actualizar sus checkboxes
-	const checkboxesHijos = contenido.querySelectorAll("input[type='checkbox']");
-	checkboxesHijos.forEach(cb => cb.checked = input.checked);
-	});
-
-	resumen.appendChild(label);
-	detalles.appendChild(resumen);
-
-	const contenido = document.createElement("div");
-	contenido.className = "filtro-grupo-contenido";
-
-	controlesGrupo.push({ input, personajes });
-
-	if (grupo.personajes?.length) {
-	grupo.personajes.forEach(nombre => renderizarPersonaje(nombre, contenido, controlesGrupo));
-	}
-
-	if (grupo.subgrupos?.length) {
-	grupo.subgrupos.forEach(subgrupo => {
-	contenido.appendChild(renderizarGrupo(subgrupo, nivel + 1, controlesGrupo));
-	});
-	}
-
-	detalles.appendChild(contenido);
-	return detalles;
+    (grupo.subgrupos || []).forEach(subgrupo => {
+        renderizarGrupoDePersonajes(subgrupo, contenedor, personajesRenderizados);
+    });
 }
 
 let ultimoContenedor = null;
@@ -145,6 +153,18 @@ function renderizarEstadoCompleto() {
     const modal = document.getElementById("modal-filtros");
     const contenedor = ultimoContenedor;
     contenedor.innerHTML = "";
+
+    const tipo = CATEGORIA_GRUPOS[state.categoriaActual] || state.categoriaActual;
+    const titulo = modal?.querySelector(".neon-text");
+    const descripcion = modal?.querySelector(".filtro-descripcion");
+
+    if (titulo) {
+        titulo.textContent = `CHARACTER FILTER: ${tipo.toUpperCase()}`;
+    }
+
+    if (descripcion) {
+        descripcion.textContent = "Pick the characters you want to exclude:";
+    }
 
     const sinPerkButton = document.createElement("button");
     sinPerkButton.type = "button";
@@ -172,11 +192,15 @@ function renderizarEstadoCompleto() {
     separador.textContent = "CHARACTERS";
     contenedor.appendChild(separador);
 
-    const grupos = obtenerGruposActuales();
-    const controlesGrupo = [];
+    const personajes = document.createElement("div");
+    personajes.className = "filtro-personajes-grid";
 
-    grupos.forEach(grupo => contenedor.appendChild(renderizarGrupo(grupo, 0, controlesGrupo)));
+    const personajesRenderizados = new Set();
+    obtenerGruposActuales().forEach(grupo => {
+        renderizarGrupoDePersonajes(grupo, personajes, personajesRenderizados);
+    });
 
+    contenedor.appendChild(personajes);
     modal.style.display = "flex";
 }
 
