@@ -120,7 +120,7 @@ function renderizarEstadoCompleto() {
         descripcion.textContent = "Pick the characters you want to exclude:";
     }
 
-    // NO PERK ocupa toda la fila del filtro.
+    // NO PERK ocupa toda la fila, por encima de todas las celdas.
     const sinPerkButton = document.createElement("button");
     sinPerkButton.type = "button";
     sinPerkButton.className = "btn-personaje filtro-sin-perk";
@@ -145,14 +145,28 @@ function renderizarEstadoCompleto() {
     const contenido = document.createElement("div");
     contenido.className = "filtro-contenido";
 
-    obtenerGruposActuales().forEach(grupo => {
-        if (grupo.subgrupos?.length) {
+    const gruposActuales = obtenerGruposActuales();
+
+    // Los grupos que no tienen subgrupos (por ejemplo General Perks)
+    // también forman parte de la cuadrícula de máximo tres columnas.
+    const gruposDirectos = gruposActuales.filter(grupo => !grupo.subgrupos?.length);
+
+    if (gruposDirectos.length) {
+        const gruposDirectosGrid = document.createElement("div");
+        gruposDirectosGrid.className = "filtro-grupos-grid";
+
+        gruposDirectos.forEach(grupo => {
+            gruposDirectosGrid.appendChild(crearGrupoPersonajes(grupo));
+        });
+
+        contenido.appendChild(gruposDirectosGrid);
+    }
+
+    gruposActuales
+        .filter(grupo => grupo.subgrupos?.length)
+        .forEach(grupo => {
             contenido.appendChild(crearBloqueAnual(grupo));
-        } else {
-            // El grupo de perks generales no tiene subgrupos.
-            contenido.appendChild(crearGrupoPersonajes(grupo));
-        }
-    });
+        });
 
     contenedor.appendChild(contenido);
     modal.style.display = "flex";
