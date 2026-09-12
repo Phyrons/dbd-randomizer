@@ -1,109 +1,186 @@
-/* --- FILTROS JERÁRQUICOS --- */
+/* ========================================================= */
+/* CHARACTER FILTER                                          */
+/* ========================================================= */
+
 .grid-personajes {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin: 20px 0;
+    width: 100%;
+    margin: 18px 0 0;
     text-align: left;
 }
 
-.filtro-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    user-select: none;
-    font-family: 'Anta', sans-serif;
-    color: white;
-}
-
-.filtro-checkbox input {
-    width: 20px;
-    height: 20px;
-    accent-color: var(--ow-blue);
-    cursor: pointer;
-    flex-shrink: 0;
-}
-
-.filtro-grupo {
-    border: 1px solid rgba(0, 210, 255, 0.25);
-    background: rgba(0, 0, 0, 0.35);
-    margin-bottom: 8px;
-}
-
-.filtro-grupo summary {
-    list-style: none;
-    cursor: pointer;
-    padding: 10px 12px;
-    background: rgba(0, 210, 255, 0.06);
-}
-
-.filtro-grupo summary::-webkit-details-marker {
-    display: none;
-}
-
-.filtro-grupo summary::before {
-    content: '▸';
-    display: inline-block;
-    width: 20px;
-    color: var(--ow-blue);
-    transition: transform 0.2s ease;
-}
-
-.filtro-grupo[open] > summary::before {
-    transform: rotate(90deg);
-}
-
-.filtro-grupo-checkbox {
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.filtro-grupo-contenido {
-    padding: 8px 12px 12px 32px;
-}
-
-.filtro-grupo.nivel-1 {
-    border-color: rgba(255, 202, 40, 0.25);
-    margin-top: 8px;
-}
-
-.filtro-grupo.nivel-1 summary {
-    background: rgba(255, 202, 40, 0.06);
-}
-
-.filtro-grupo.nivel-1 summary::before {
-    color: var(--ow-gold);
-}
-
-.filtro-personaje {
-    padding: 6px 4px;
-    font-size: 19px;
-}
-
-.filtro-personaje:hover,
-.filtro-grupo summary:hover {
-    background: rgba(0, 210, 255, 0.08);
-}
-
 .filtro-sin-perk {
+    display: block;
     width: 100%;
-    margin-bottom: 5px;
+    min-height: 48px;
+    margin: 0 0 14px;
+    padding: 10px 16px;
+    border: 1px solid rgba(57, 255, 20, 0.35);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.42);
+    color: rgba(255, 255, 255, 0.82);
+    font-family: 'Quantico', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filtro-sin-perk:hover {
+    background: rgba(57, 255, 20, 0.08);
+    border-color: rgba(57, 255, 20, 0.65);
 }
 
 .filtro-sin-perk.sin-perk-activo {
     border-color: var(--ow-green);
     color: var(--ow-green);
-    box-shadow: 0 0 10px rgba(57, 255, 20, 0.35);
+    box-shadow: 0 0 12px rgba(57, 255, 20, 0.25);
 }
 
 .filtro-separador {
     width: 100%;
-    padding: 8px 0;
-    margin-bottom: 8px;
+    margin: 8px 0 12px;
+    padding: 8px 2px;
     color: var(--ow-blue);
     border-bottom: 1px solid rgba(0, 210, 255, 0.35);
     font-family: 'Quantico', sans-serif;
+    font-size: 16px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+}
+
+/* --------------------------------------------------------- */
+/* PERSONAJE EN COLUMNAS                                     */
+/* --------------------------------------------------------- */
+
+.filtro-personajes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+}
+
+.filtro-personaje-card {
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid rgba(0, 210, 255, 0.22);
+    border-radius: 6px;
+    background: linear-gradient(
+        145deg,
+        rgba(0, 210, 255, 0.07),
+        rgba(0, 0, 0, 0.38)
+    );
+    box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.22);
+    transition: border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+.filtro-personaje-card:hover {
+    border-color: rgba(0, 210, 255, 0.58);
+    background: linear-gradient(
+        145deg,
+        rgba(0, 210, 255, 0.12),
+        rgba(0, 0, 0, 0.42)
+    );
+}
+
+.filtro-personaje-card.excluido {
+    opacity: 0.52;
+    border-color: rgba(255, 80, 80, 0.25);
+}
+
+.filtro-personaje-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 34px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filtro-personaje-cabecera input {
+    width: 19px;
+    height: 19px;
+    margin: 0;
+    accent-color: var(--ow-blue);
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.filtro-personaje-nombre {
+    min-width: 0;
+    overflow: hidden;
+    color: white;
+    font-family: 'Quantico', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.15;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* --------------------------------------------------------- */
+/* PERKS DENTRO DE CADA PERSONAJE                            */
+/* --------------------------------------------------------- */
+
+.filtro-perks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 7px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.filtro-perk {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+    padding: 3px 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-family: 'Anta', sans-serif;
+    font-size: 13px;
+    line-height: 1.15;
+}
+
+.filtro-perk img {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    object-fit: contain;
+}
+
+.filtro-perk span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.filtro-perks-vacio {
+    padding: 5px 0;
+    color: rgba(255, 255, 255, 0.35);
+    font-family: 'Anta', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------- */
+/* RESPONSIVE                                                */
+/* --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .filtro-personajes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .filtro-personajes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filtro-personaje-nombre {
+        font-size: 15px;
+    }
 }
