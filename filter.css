@@ -138,6 +138,62 @@
     letter-spacing: 1px;
 }
 
+/* Títulos de grupos que también funcionan como selector masivo. */
+.filtro-grupo-titulo-check {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filtro-grupo-titulo-check input {
+    width: 19px;
+    height: 19px;
+    margin: 0;
+    flex: 0 0 19px;
+    accent-color: var(--ow-blue);
+    cursor: pointer;
+}
+
+.filtro-grupo-titulo-check span {
+    min-width: 0;
+}
+
+.filtro-ano-titulo-check {
+    color: var(--ow-blue);
+}
+
+.filtro-ano-titulo-check input {
+    accent-color: var(--ow-blue);
+}
+
+/* Selector global de toda la categoría. */
+.filtro-control-masivo {
+    border-color: rgba(57, 255, 20, 0.3);
+}
+
+.filtro-control-masivo:hover {
+    border-color: rgba(57, 255, 20, 0.65);
+}
+
+.filtro-control-masivo .filtro-grupo-titulo {
+    color: var(--ow-green);
+}
+
+.filtro-masivo-item {
+    color: var(--ow-green);
+    font-weight: 700;
+}
+
+.filtro-masivo-item:hover {
+    color: var(--ow-green);
+}
+
+.filtro-masivo-item input {
+    accent-color: var(--ow-green);
+}
+
 .filtro-grupo-personajes {
     display: flex;
     flex-direction: column;
