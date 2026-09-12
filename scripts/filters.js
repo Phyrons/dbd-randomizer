@@ -47,7 +47,7 @@ function establecerExclusionParaLista(nombres, excluir) {
     nombres.forEach(nombre => establecerExclusion(nombre, excluir));
 }
 
-function crearControlPersonaje(nombre, actualizarControles) {
+function crearControlPersonaje(nombre) {
     const label = document.createElement("label");
     label.className = "filtro-personaje-item";
 
@@ -61,13 +61,18 @@ function crearControlPersonaje(nombre, actualizarControles) {
 
     label.append(input, texto);
 
+    const actualizar = () => {
+        input.checked = !estaExcluido(nombre);
+        label.classList.toggle("excluido", !input.checked);
+    };
+
     input.addEventListener("change", () => {
         establecerExclusion(nombre, !input.checked);
-        label.classList.toggle("excluido", !input.checked);
-        actualizarControles();
+        actualizarTodosLosControles();
     });
 
-    label.classList.toggle("excluido", !input.checked);
+    actualizar();
+    registrarActualizacion(actualizar);
     return label;
 }
 
@@ -86,12 +91,12 @@ function actualizarEstadoCheckboxMasivo(input, nombres) {
     input.indeterminate = incluidos > 0 && incluidos < nombres.length;
 }
 
-function crearControlMasivo(tituloTexto, etiquetaTexto, obtenerNombres, actualizarControles, claseTitulo = "") {
+function crearControlMasivo(tituloTexto, etiquetaTexto, obtenerNombres) {
     const seccion = document.createElement("section");
     seccion.className = "filtro-grupo-card filtro-control-masivo";
 
     const titulo = document.createElement("div");
-    titulo.className = `filtro-grupo-titulo ${claseTitulo}`.trim();
+    titulo.className = "filtro-grupo-titulo";
     titulo.textContent = tituloTexto;
     seccion.appendChild(titulo);
 
@@ -114,14 +119,14 @@ function crearControlMasivo(tituloTexto, etiquetaTexto, obtenerNombres, actualiz
     input.addEventListener("change", () => {
         const nombres = obtenerNombres();
         establecerExclusionParaLista(nombres, !input.checked);
-        actualizarControles();
+        actualizarTodosLosControles();
     });
 
     actualizar();
     return { seccion, actualizar };
 }
 
-function crearGrupoPersonajes(grupo, registrarActualizacion) {
+function crearGrupoPersonajes(grupo) {
     const seccion = document.createElement("section");
     seccion.className = "filtro-grupo-card";
 
@@ -144,7 +149,7 @@ function crearGrupoPersonajes(grupo, registrarActualizacion) {
     personajesContenedor.className = "filtro-grupo-personajes";
 
     personajes.forEach(nombre => {
-        personajesContenedor.appendChild(crearControlPersonaje(nombre, actualizarTodosLosControles));
+        personajesContenedor.appendChild(crearControlPersonaje(nombre));
     });
 
     if (!personajesContenedor.children.length) {
@@ -173,7 +178,7 @@ function obtenerPersonajesDeBloque(grupo) {
     return obtenerPersonajesDeTodosLosGrupos(grupo.subgrupos || []);
 }
 
-function crearBloqueAnual(grupo, registrarActualizacion) {
+function crearBloqueAnual(grupo) {
     const bloque = document.createElement("section");
     bloque.className = "filtro-bloque-anual";
 
@@ -194,7 +199,7 @@ function crearBloqueAnual(grupo, registrarActualizacion) {
     grupos.className = "filtro-grupos-grid";
 
     (grupo.subgrupos || []).forEach(subgrupo => {
-        grupos.appendChild(crearGrupoPersonajes(subgrupo, registrarActualizacion));
+        grupos.appendChild(crearGrupoPersonajes(subgrupo));
     });
 
     bloque.appendChild(grupos);
@@ -285,15 +290,14 @@ function renderizarEstadoCompleto() {
             const controlTodos = crearControlMasivo(
                 "Select All Perks",
                 "All Perks",
-                () => todosLosPersonajes,
-                actualizarTodosLosControles
+                () => todosLosPersonajes
             );
             registrarActualizacion(controlTodos.actualizar);
             gruposDirectosGrid.appendChild(controlTodos.seccion);
         }
 
         gruposDirectos.forEach(grupo => {
-            gruposDirectosGrid.appendChild(crearGrupoPersonajes(grupo, registrarActualizacion));
+            gruposDirectosGrid.appendChild(crearGrupoPersonajes(grupo));
         });
 
         contenido.appendChild(gruposDirectosGrid);
@@ -302,7 +306,7 @@ function renderizarEstadoCompleto() {
     gruposActuales
         .filter(grupo => grupo.subgrupos?.length)
         .forEach(grupo => {
-            contenido.appendChild(crearBloqueAnual(grupo, registrarActualizacion));
+            contenido.appendChild(crearBloqueAnual(grupo));
         });
 
     contenedor.appendChild(contenido);
