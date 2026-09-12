@@ -8,11 +8,15 @@
     text-align: left;
 }
 
+/* --------------------------------------------------------- */
+/* NO PERK: FILA COMPLETA                                    */
+/* --------------------------------------------------------- */
+
 .filtro-sin-perk {
     display: block;
     width: 100%;
     min-height: 48px;
-    margin: 0 0 14px;
+    margin: 0 0 16px;
     padding: 10px 16px;
     border: 1px solid rgba(57, 255, 20, 0.35);
     border-radius: 6px;
@@ -22,6 +26,7 @@
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 2px;
+    text-align: center;
     cursor: pointer;
     transition: 0.2s ease;
 }
@@ -37,32 +42,50 @@
     box-shadow: 0 0 12px rgba(57, 255, 20, 0.25);
 }
 
-.filtro-separador {
+/* --------------------------------------------------------- */
+/* CONTENIDO DEL FILTRO                                     */
+/* --------------------------------------------------------- */
+
+.filtro-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     width: 100%;
-    margin: 8px 0 12px;
-    padding: 8px 2px;
-    color: var(--ow-blue);
-    border-bottom: 1px solid rgba(0, 210, 255, 0.35);
-    font-family: 'Quantico', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 3px;
 }
 
-/* --------------------------------------------------------- */
-/* PERSONAJE EN COLUMNAS                                     */
-/* --------------------------------------------------------- */
+/* Cada año ocupa una fila completa. */
+.filtro-bloque-anual {
+    width: 100%;
+}
 
-.filtro-personajes-grid {
+.filtro-ano-titulo {
+    width: 100%;
+    margin: 0 0 8px;
+    padding: 7px 10px;
+    border-bottom: 1px solid rgba(0, 210, 255, 0.4);
+    color: var(--ow-blue);
+    font-family: 'Quantico', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: left;
+}
+
+/* Los capítulos/franquicias ocupan tres columnas de igual ancho. */
+.filtro-grupos-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
     width: 100%;
 }
 
-.filtro-personaje-card {
+/* --------------------------------------------------------- */
+/* GRUPO / CAPÍTULO                                          */
+/* --------------------------------------------------------- */
+
+.filtro-grupo-card {
     min-width: 0;
-    padding: 10px;
+    padding: 10px 12px;
     border: 1px solid rgba(0, 210, 255, 0.22);
     border-radius: 6px;
     background: linear-gradient(
@@ -71,10 +94,10 @@
         rgba(0, 0, 0, 0.38)
     );
     box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.22);
-    transition: border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+    transition: border-color 0.2s ease, background 0.2s ease;
 }
 
-.filtro-personaje-card:hover {
+.filtro-grupo-card:hover {
     border-color: rgba(0, 210, 255, 0.58);
     background: linear-gradient(
         145deg,
@@ -83,82 +106,76 @@
     );
 }
 
-.filtro-personaje-card.excluido {
-    opacity: 0.52;
-    border-color: rgba(255, 80, 80, 0.25);
-}
-
-.filtro-personaje-cabecera {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    min-height: 34px;
+.filtro-grupo-titulo {
+    min-height: 32px;
     margin-bottom: 8px;
-    cursor: pointer;
-    user-select: none;
-}
-
-.filtro-personaje-cabecera input {
-    width: 19px;
-    height: 19px;
-    margin: 0;
-    accent-color: var(--ow-blue);
-    cursor: pointer;
-    flex: 0 0 auto;
-}
-
-.filtro-personaje-nombre {
-    min-width: 0;
-    overflow: hidden;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     font-family: 'Quantico', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
-    line-height: 1.15;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    line-height: 1.2;
+    letter-spacing: 1px;
 }
 
-/* --------------------------------------------------------- */
-/* PERKS DENTRO DE CADA PERSONAJE                            */
-/* --------------------------------------------------------- */
-
-.filtro-perks {
+.filtro-grupo-personajes {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    padding-top: 7px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 4px;
+    width: 100%;
 }
 
-.filtro-perk {
+/* --------------------------------------------------------- */
+/* CHECKS: SOLO PERSONAJES                                  */
+/* --------------------------------------------------------- */
+
+.filtro-personaje-item {
     display: flex;
     align-items: center;
-    gap: 7px;
-    min-width: 0;
-    padding: 3px 0;
-    color: rgba(255, 255, 255, 0.72);
+    gap: 8px;
+    width: 100%;
+    min-height: 31px;
+    padding: 4px 2px;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.9);
     font-family: 'Anta', sans-serif;
-    font-size: 13px;
-    line-height: 1.15;
+    font-size: 14px;
+    line-height: 1.2;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s ease, color 0.15s ease, opacity 0.15s ease;
 }
 
-.filtro-perk img {
-    width: 30px;
-    height: 30px;
-    flex: 0 0 30px;
-    object-fit: contain;
+.filtro-personaje-item:hover {
+    background: rgba(0, 210, 255, 0.08);
+    color: white;
 }
 
-.filtro-perk span {
+.filtro-personaje-item input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    flex: 0 0 18px;
+    accent-color: var(--ow-blue);
+    cursor: pointer;
+}
+
+.filtro-personaje-item span {
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.filtro-perks-vacio {
-    padding: 5px 0;
+.filtro-personaje-item.excluido {
+    opacity: 0.42;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: line-through;
+}
+
+.filtro-grupo-vacio {
+    padding: 5px 2px;
     color: rgba(255, 255, 255, 0.35);
     font-family: 'Anta', sans-serif;
     font-size: 12px;
@@ -166,21 +183,33 @@
 }
 
 /* --------------------------------------------------------- */
+/* GRUPO ESPECIAL: GENERAL PERKS                             */
+/* --------------------------------------------------------- */
+
+.filtro-contenido > .filtro-grupo-card {
+    width: 100%;
+}
+
+/* --------------------------------------------------------- */
 /* RESPONSIVE                                                */
 /* --------------------------------------------------------- */
 
 @media (max-width: 900px) {
-    .filtro-personajes-grid {
+    .filtro-grupos-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 560px) {
-    .filtro-personajes-grid {
+    .filtro-grupos-grid {
         grid-template-columns: 1fr;
     }
 
-    .filtro-personaje-nombre {
-        font-size: 15px;
+    .filtro-grupo-titulo {
+        font-size: 13px;
+    }
+
+    .filtro-personaje-item {
+        font-size: 13px;
     }
 }
