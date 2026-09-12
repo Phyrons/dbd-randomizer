@@ -14,6 +14,20 @@ function obtenerPersonajesDeGrupo(grupo) {
     return [...new Set(grupo.personajes || [])];
 }
 
+function obtenerPersonajesDeTodosLosGrupos(grupos = obtenerGruposActuales()) {
+    const personajes = [];
+
+    grupos.forEach(grupo => {
+        personajes.push(...obtenerPersonajesDeGrupo(grupo));
+
+        if (grupo.subgrupos?.length) {
+            personajes.push(...obtenerPersonajesDeTodosLosGrupos(grupo.subgrupos));
+        }
+    });
+
+    return [...new Set(personajes)];
+}
+
 function estaExcluido(nombre) {
     return state.excluidosPorCategoria[state.categoriaActual].includes(nombre);
 }
@@ -29,7 +43,11 @@ function establecerExclusion(nombre, excluir) {
     }
 }
 
-function crearControlPersonaje(nombre) {
+function establecerExclusionParaLista(nombres, excluir) {
+    nombres.forEach(nombre => establecerExclusion(nombre, excluir));
+}
+
+function crearControlPersonaje(nombre, actualizarControles) {
     const label = document.createElement("label");
     label.className = "filtro-personaje-item";
 
@@ -46,60 +64,166 @@ function crearControlPersonaje(nombre) {
     input.addEventListener("change", () => {
         establecerExclusion(nombre, !input.checked);
         label.classList.toggle("excluido", !input.checked);
+        actualizarControles();
     });
 
     label.classList.toggle("excluido", !input.checked);
     return label;
 }
 
-function crearGrupoPersonajes(grupo) {
+function actualizarEstadoCheckboxMasivo(input, nombres) {
+    if (!nombres.length) {
+        input.checked = false;
+        input.indeterminate = false;
+        input.disabled = true;
+        return;
+    }
+
+    const incluidos = nombres.filter(nombre => !estaExcluido(nombre)).length;
+
+    input.disabled = false;
+    input.checked = incluidos === nombres.length;
+    input.indeterminate = incluidos > 0 && incluidos < nombres.length;
+}
+
+function crearControlMasivo(tituloTexto, etiquetaTexto, obtenerNombres, actualizarControles, claseTitulo = "") {
+    const seccion = document.createElement("section");
+    seccion.className = "filtro-grupo-card filtro-control-masivo";
+
+    const titulo = document.createElement("div");
+    titulo.className = `filtro-grupo-titulo ${claseTitulo}`.trim();
+    titulo.textContent = tituloTexto;
+    seccion.appendChild(titulo);
+
+    const item = document.createElement("label");
+    item.className = "filtro-personaje-item filtro-masivo-item";
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+
+    const texto = document.createElement("span");
+    texto.textContent = etiquetaTexto;
+
+    item.append(input, texto);
+    seccion.appendChild(item);
+
+    const actualizar = () => {
+        actualizarEstadoCheckboxMasivo(input, obtenerNombres());
+    };
+
+    input.addEventListener("change", () => {
+        const nombres = obtenerNombres();
+        establecerExclusionParaLista(nombres, !input.checked);
+        actualizarControles();
+    });
+
+    actualizar();
+    return { seccion, actualizar };
+}
+
+function crearGrupoPersonajes(grupo, registrarActualizacion) {
     const seccion = document.createElement("section");
     seccion.className = "filtro-grupo-card";
 
-    const titulo = document.createElement("div");
-    titulo.className = "filtro-grupo-titulo";
-    titulo.textContent = grupo.nombre;
+    const personajes = obtenerPersonajesDeGrupo(grupo);
+
+    const titulo = document.createElement("label");
+    titulo.className = "filtro-grupo-titulo filtro-grupo-titulo-check";
+
+    const tituloInput = document.createElement("input");
+    tituloInput.type = "checkbox";
+    tituloInput.setAttribute("aria-label", `Include all ${grupo.nombre}`);
+
+    const tituloTexto = document.createElement("span");
+    tituloTexto.textContent = grupo.nombre;
+
+    titulo.append(tituloInput, tituloTexto);
     seccion.appendChild(titulo);
 
-    const personajes = document.createElement("div");
-    personajes.className = "filtro-grupo-personajes";
+    const personajesContenedor = document.createElement("div");
+    personajesContenedor.className = "filtro-grupo-personajes";
 
-    obtenerPersonajesDeGrupo(grupo).forEach(nombre => {
-        personajes.appendChild(crearControlPersonaje(nombre));
+    personajes.forEach(nombre => {
+        personajesContenedor.appendChild(crearControlPersonaje(nombre, actualizarTodosLosControles));
     });
 
-    if (!personajes.children.length) {
+    if (!personajesContenedor.children.length) {
         const vacio = document.createElement("span");
         vacio.className = "filtro-grupo-vacio";
         vacio.textContent = "No characters";
-        personajes.appendChild(vacio);
+        personajesContenedor.appendChild(vacio);
     }
 
-    seccion.appendChild(personajes);
+    seccion.appendChild(personajesContenedor);
+
+    const actualizar = () => {
+        actualizarEstadoCheckboxMasivo(tituloInput, personajes);
+    };
+
+    tituloInput.addEventListener("change", () => {
+        establecerExclusionParaLista(personajes, !tituloInput.checked);
+        actualizarTodosLosControles();
+    });
+
+    registrarActualizacion(actualizar);
     return seccion;
 }
 
-function crearBloqueAnual(grupo) {
+function obtenerPersonajesDeBloque(grupo) {
+    return obtenerPersonajesDeTodosLosGrupos(grupo.subgrupos || []);
+}
+
+function crearBloqueAnual(grupo, registrarActualizacion) {
     const bloque = document.createElement("section");
     bloque.className = "filtro-bloque-anual";
 
-    const titulo = document.createElement("div");
-    titulo.className = "filtro-ano-titulo";
-    titulo.textContent = grupo.nombre;
+    const titulo = document.createElement("label");
+    titulo.className = "filtro-ano-titulo filtro-grupo-titulo-check filtro-ano-titulo-check";
+
+    const tituloInput = document.createElement("input");
+    tituloInput.type = "checkbox";
+    tituloInput.setAttribute("aria-label", `Include all ${grupo.nombre}`);
+
+    const tituloTexto = document.createElement("span");
+    tituloTexto.textContent = grupo.nombre;
+
+    titulo.append(tituloInput, tituloTexto);
     bloque.appendChild(titulo);
 
     const grupos = document.createElement("div");
     grupos.className = "filtro-grupos-grid";
 
     (grupo.subgrupos || []).forEach(subgrupo => {
-        grupos.appendChild(crearGrupoPersonajes(subgrupo));
+        grupos.appendChild(crearGrupoPersonajes(subgrupo, registrarActualizacion));
     });
 
     bloque.appendChild(grupos);
+
+    const personajes = obtenerPersonajesDeBloque(grupo);
+
+    const actualizar = () => {
+        actualizarEstadoCheckboxMasivo(tituloInput, personajes);
+    };
+
+    tituloInput.addEventListener("change", () => {
+        establecerExclusionParaLista(personajes, !tituloInput.checked);
+        actualizarTodosLosControles();
+    });
+
+    registrarActualizacion(actualizar);
     return bloque;
 }
 
 let ultimoContenedor = null;
+let actualizadoresControles = [];
+
+function registrarActualizacion(actualizar) {
+    actualizadoresControles.push(actualizar);
+}
+
+function actualizarTodosLosControles() {
+    actualizadoresControles.forEach(actualizar => actualizar());
+}
 
 function renderizarEstadoCompleto() {
     if (!ultimoContenedor) return;
@@ -107,6 +231,7 @@ function renderizarEstadoCompleto() {
     const modal = document.getElementById("modal-filtros");
     const contenedor = ultimoContenedor;
     contenedor.innerHTML = "";
+    actualizadoresControles = [];
 
     const tipo = CATEGORIA_GRUPOS[state.categoriaActual] || state.categoriaActual;
     const titulo = modal?.querySelector(".neon-text");
@@ -146,17 +271,29 @@ function renderizarEstadoCompleto() {
     contenido.className = "filtro-contenido";
 
     const gruposActuales = obtenerGruposActuales();
+    const todosLosPersonajes = obtenerPersonajesDeTodosLosGrupos(gruposActuales);
 
-    // Los grupos que no tienen subgrupos (por ejemplo General Perks)
-    // también forman parte de la cuadrícula de máximo tres columnas.
+    // La primera fila contiene el control global y los grupos directos,
+    // como General Perks.
     const gruposDirectos = gruposActuales.filter(grupo => !grupo.subgrupos?.length);
 
-    if (gruposDirectos.length) {
+    if (gruposDirectos.length || todosLosPersonajes.length) {
         const gruposDirectosGrid = document.createElement("div");
         gruposDirectosGrid.className = "filtro-grupos-grid";
 
+        if (todosLosPersonajes.length) {
+            const controlTodos = crearControlMasivo(
+                "Select All Perks",
+                "All Perks",
+                () => todosLosPersonajes,
+                actualizarTodosLosControles
+            );
+            registrarActualizacion(controlTodos.actualizar);
+            gruposDirectosGrid.appendChild(controlTodos.seccion);
+        }
+
         gruposDirectos.forEach(grupo => {
-            gruposDirectosGrid.appendChild(crearGrupoPersonajes(grupo));
+            gruposDirectosGrid.appendChild(crearGrupoPersonajes(grupo, registrarActualizacion));
         });
 
         contenido.appendChild(gruposDirectosGrid);
@@ -165,10 +302,11 @@ function renderizarEstadoCompleto() {
     gruposActuales
         .filter(grupo => grupo.subgrupos?.length)
         .forEach(grupo => {
-            contenido.appendChild(crearBloqueAnual(grupo));
+            contenido.appendChild(crearBloqueAnual(grupo, registrarActualizacion));
         });
 
     contenedor.appendChild(contenido);
+    actualizarTodosLosControles();
     modal.style.display = "flex";
 }
 
