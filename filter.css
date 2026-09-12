@@ -1,0 +1,227 @@
+/* ========================================================= */
+/* CHARACTER FILTER                                          */
+/* ========================================================= */
+
+/* El contenedor completo del filtro debe ser un bloque.
+   style.css define .grid-personajes como grid, así que aquí
+   lo anulamos explícitamente. */
+.grid-personajes {
+    display: block;
+    width: 100%;
+    margin: 18px 0 0;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* El modal debe aprovechar mucho más el ancho de la página. */
+.modal-content {
+    width: 95vw;
+    max-width: 1600px;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------- */
+/* NO PERK: FILA COMPLETA                                    */
+/* --------------------------------------------------------- */
+
+.filtro-sin-perk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 50px;
+    margin: 0 0 16px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(57, 255, 20, 0.35);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.42);
+    color: rgba(255, 255, 255, 0.82);
+    font-family: 'Quantico', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filtro-sin-perk:hover {
+    background: rgba(57, 255, 20, 0.08);
+    border-color: rgba(57, 255, 20, 0.65);
+}
+
+.filtro-sin-perk.sin-perk-activo {
+    border-color: var(--ow-green);
+    color: var(--ow-green);
+    box-shadow: 0 0 12px rgba(57, 255, 20, 0.25);
+}
+
+/* --------------------------------------------------------- */
+/* CONTENIDO DEL FILTRO                                     */
+/* --------------------------------------------------------- */
+
+.filtro-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.filtro-bloque-anual {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.filtro-ano-titulo {
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 210, 255, 0.4);
+    color: var(--ow-blue);
+    font-family: 'Quantico', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: left;
+}
+
+/* --------------------------------------------------------- */
+/* MÁXIMO 3 COLUMNAS                                        */
+/* --------------------------------------------------------- */
+
+.filtro-grupos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.filtro-grupo-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid rgba(0, 210, 255, 0.22);
+    border-radius: 6px;
+    background: linear-gradient(
+        145deg,
+        rgba(0, 210, 255, 0.07),
+        rgba(0, 0, 0, 0.38)
+    );
+    box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.22);
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.filtro-grupo-card:hover {
+    border-color: rgba(0, 210, 255, 0.58);
+    background: linear-gradient(
+        145deg,
+        rgba(0, 210, 255, 0.12),
+        rgba(0, 0, 0, 0.42)
+    );
+}
+
+.filtro-grupo-titulo {
+    min-height: 32px;
+    margin-bottom: 8px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: orange;
+    font-family: 'Quantico', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 1px;
+}
+
+.filtro-grupo-personajes {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+/* --------------------------------------------------------- */
+/* CHECKS: SOLO PERSONAJES                                  */
+/* --------------------------------------------------------- */
+
+.filtro-personaje-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    min-height: 32px;
+    padding: 4px 2px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.92);
+    font-family: 'Anta', sans-serif;
+    font-size: 20px;
+    line-height: 1.25;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+
+.filtro-personaje-item:hover {
+    background: rgba(0, 210, 255, 0.08);
+    color: white;
+}
+
+.filtro-personaje-item input {
+    width: 19px;
+    height: 19px;
+    margin: 0;
+    flex: 0 0 19px;
+    accent-color: var(--ow-blue);
+    cursor: pointer;
+}
+
+.filtro-personaje-item span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.filtro-personaje-item.excluido {
+    opacity: 0.42;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: line-through;
+}
+
+.filtro-grupo-vacio {
+    padding: 5px 2px;
+    color: rgba(255, 255, 255, 0.35);
+    font-family: 'Anta', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------- */
+/* RESPONSIVE                                                */
+/* --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+    .filtro-grupos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .filtro-grupos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filtro-grupo-titulo {
+        font-size: 14px;
+    }
+
+    .filtro-personaje-item {
+        font-size: 14px;
+    }
+}
